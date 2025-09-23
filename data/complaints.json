@@ -1,0 +1,44 @@
+[
+  {
+    "enquiry_number": "ENQ202509180001",
+    "opus_id": "69271",
+    "customer_name": "Amit Chandra",
+    "type": "enquiry",
+    "enquiry_type": "KYC Assistance",
+    "subject": "Guidance for Partial KYC Completion",
+    "description": "Customer's KYC is partial. Enquiry created to guide them on completing the process. Informed that approval takes 30 days post-completion.",
+    "status": "logged",
+    "created_date": "2025-09-18T22:12:39.140873",
+    "category": "General enquiries/Others",
+    "sub_category": "Other Enquiries",
+    "issue": "Become a Painter/Contractor"
+  },
+  {
+    "enquiry_number": "ENQ202509230002",
+    "opus_id": "69271",
+    "customer_name": "Amit Chandra",
+    "type": "enquiry",
+    "enquiry_type": "KYC Issue",
+    "subject": "KYC Partial",
+    "description": "Customer has partial KYC. Enquiry created to check on completion.",
+    "status": "logged",
+    "created_date": "2025-09-23T20:03:53.657809",
+    "category": "General enquiries/Others",
+    "sub_category": "Other Enquiries",
+    "issue": "Become a Painter/Contractor"
+  },
+  {
+    "enquiry_number": "ENQ202509230003",
+    "opus_id": "69271",
+    "customer_name": "Amit Chandra",
+    "type": "enquiry",
+    "enquiry_type": "KYC Completion Guidance",
+    "subject": "Guidance for Incomplete KYC",
+    "description": "Customer has partial KYC and needs guidance on how to complete the remaining KYC process.",
+    "status": "logged",
+    "created_date": "2025-09-23T20:10:16.541950",
+    "category": "General enquiries/Others",
+    "sub_category": "Other Enquiries",
+    "issue": "Become a Painter/Contractor"
+  }
+]

@@ -1,0 +1,94 @@
+"""
+Customer lookup tools for KYC Customer Care Bot.
+- Look up by mobile number
+- Look up by Opus ID
+"""
+
+import csv
+import os
+from typing import Dict, Any, List
+from livekit.agents import function_tool
+
+def _get_data_file_path() -> str:
+    """Helper to get the absolute path to the mock data file."""
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(current_dir))  # Go up two levels from src/tools/
+    return os.path.join(project_root, "data", "mock.csv")
+
+def _find_customers(key: str, value: str) -> List[Dict[str, Any]]:
+    """Internal function to search for customers in the CSV."""
+    data_file = _get_data_file_path()
+    if not os.path.exists(data_file):
+        raise FileNotFoundError(f"Customer data file not found at {data_file}")
+
+    accounts = []
+    with open(data_file, 'r', encoding='utf-8') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            if key == 'mobile_number':
+                # For mobile numbers, clean both values and compare as strings
+                row_value = ''.join(filter(str.isdigit, row.get(key, '')))
+                if row_value == value:
+                    accounts.append({
+                        "opus_id": row.get('opus_id', ''),
+                        "name": f"{row.get('first_name', '')} {row.get('last_name', '')}".strip(),
+                        "email": row.get('email', ''),
+                        "kyc_status": row.get('kyc_status', ''),
+                        "account_status": row.get('status', ''),
+                        "data_created": row.get('data_created', '')
+                    })
+            else:
+                # For other fields like opus_id, compare as strings (case insensitive)
+                row_value = row.get(key, '')
+                if row_value.lower() == value.lower():
+                    accounts.append({
+                        "opus_id": row.get('opus_id', ''),
+                        "name": f"{row.get('first_name', '')} {row.get('last_name', '')}".strip(),
+                        "email": row.get('email', ''),
+                        "kyc_status": row.get('kyc_status', ''),
+                        "account_status": row.get('status', ''),
+                        "data_created": row.get('data_created', '')
+                    })
+    return accounts
+
+@function_tool()
+async def customer_lookup_tool(mobile_number: str) -> str:
+    """
+    Looks up customer details using their 10-digit mobile number.
+    Use this tool when the customer confirms they are calling from their registered number.
+    """
+    try:
+        clean_phone = ''.join(filter(str.isdigit, mobile_number))
+        if len(clean_phone) != 10:
+            return "Invalid phone number format. Please provide a 10-digit phone number."
+
+        accounts = _find_customers('mobile_number', clean_phone)
+
+        if not accounts:
+            return f"No accounts found for mobile number {mobile_number}."
+        
+        return f"Found {len(accounts)} account(s): {accounts}. Multiple accounts: {len(accounts) > 1}."
+
+    except Exception as e:
+        return f"An error occurred during customer lookup: {str(e)}"
+
+@function_tool()
+async def customer_lookup_by_opus_id_tool(opus_id: str) -> str:
+    """
+    Looks up customer details using their Opus ID.
+    Use this tool when the customer provides their Opus ID for verification.
+    """
+    try:
+        if not opus_id:
+            return "Opus ID was not provided."
+
+        accounts = _find_customers('opus_id', opus_id)
+
+        if not accounts:
+            return f"No account found for Opus ID {opus_id}."
+        
+        # Assuming Opus ID is unique, so we expect only one account
+        return f"Found account: {accounts[0]}."
+
+    except Exception as e:
+        return f"An error occurred during customer lookup by Opus ID: {str(e)}"

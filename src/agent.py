@@ -21,6 +21,7 @@ from livekit.agents import (
 from livekit.agents.llm import function_tool
 from livekit.plugins import cartesia, deepgram, noise_cancellation, openai, silero
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
+from livekit.plugins import sarvam
 
 # Import helper functions from tools
 from tools.customer_lookup import _find_customers, _get_data_file_path as get_customer_data_path
@@ -566,9 +567,10 @@ async def entrypoint(ctx: JobContext):
         llm=google.LLM(model="gemini-2.5-flash"),
         # Speech-to-text (STT) is your agent's ears, turning the user's speech into text that the LLM can understand
         # See all providers at https://docs.livekit.io/agents/integrations/stt/
-        stt=google.STT(model="telephony", spoken_punctuation=False, languages=["en-IN", "hi-IN"], use_streaming=True),
+        stt=google.STT(model="telephony", spoken_punctuation=False, languages=["en-IN", "hi-IN", "en-US"], use_streaming=True),
         # Text-to-speech (TTS) is your agent's voice, turning the LLM's text into speech that the user can hear
         # See all providers at https://docs.livekit.io/agents/integrations/tts/
+        # tts=sarvam.TTS(target_language_code="hi-IN", speaker="anushka",enable_preprocessing=True),
         tts=google.TTS(gender="female", voice_name="hi-IN-Chirp3-HD-Achernar", language="hi-IN", use_streaming=True),
         # VAD and turn detection are used to determine when the user is speaking and when the agent should respond
         # See more at https://docs.livekit.io/agents/build/turns
@@ -625,6 +627,10 @@ async def entrypoint(ctx: JobContext):
             # - For telephony applications, use `BVCTelephony` for best results
             noise_cancellation=noise_cancellation.BVC(),
         ),
+    )
+
+    await session.generate_reply(
+        instructions="Greet the user and offer your assistance."
     )
 
     # Join the room and connect to the user

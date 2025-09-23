@@ -40,5 +40,19 @@
     "category": "General enquiries/Others",
     "sub_category": "Other Enquiries",
     "issue": "Become a Painter/Contractor"
+  },
+  {
+    "enquiry_number": "ENQ202509230004",
+    "opus_id": "69271",
+    "customer_name": "Amit Chandra",
+    "type": "enquiry",
+    "enquiry_type": "KYC Assistance",
+    "subject": "Partial KYC - Aadhar Pending",
+    "description": "Customer has partial KYC due to pending Aadhar document. Requires guidance to complete the process. Customer also expressed concerns about not receiving support for a long time.",
+    "status": "logged",
+    "created_date": "2025-09-23T21:44:44.640328",
+    "category": "General enquiries/Others",
+    "sub_category": "Other Enquiries",
+    "issue": "Become a Painter/Contractor"
   }
 ]

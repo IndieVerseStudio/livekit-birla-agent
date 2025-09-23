@@ -98,4 +98,4 @@ id,opus_id,first_name,last_name,mobile_number,email,status,kyc_status,is_aadhar_
 97,36947,Priya,Sharma,9812345766,priya.s@example.com,D,R,false,true,false,false,33
 98,47058,Ajay,Mishra,9812345767,ajay.m@example.com,Y,F,true,true,true,true,26
 99,58169,Divya,Verma,9812345768,divya.v@example.com,P,P,true,false,true,false,32
-100,69271,Amit,Chandra,9812345769,amit.c@example.com,P,P,true,true,true,true,32
+100,69271,Amit,Chandra,9812345769,amit.c@example.com,P,P,false,true,true,true,32

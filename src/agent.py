@@ -563,7 +563,7 @@ async def entrypoint(ctx: JobContext):
     # Set up a voice AI pipeline using OpenAI, Cartesia, Deepgram, and the LiveKit turn detector
     session = AgentSession(
         llm=google.LLM(model="gemini-2.5-flash"),
-        stt=google.STT(model="telephony", spoken_punctuation=False, languages=["en-IN", "hi-IN", "en-US"], use_streaming=True),
+        stt=google.STT(model="telephony", spoken_punctuation=False, languages=["en-IN"], use_streaming=True),
         tts=google.TTS(gender="female", voice_name="hi-IN-Chirp3-HD-Achernar", language="hi-IN", use_streaming=True),
         vad=silero.VAD.load(
         ),

@@ -573,6 +573,7 @@ async def entrypoint(ctx: JobContext):
         min_interruption_words=0,
         min_endpointing_delay=0.1,
         max_endpointing_delay=0.5,
+        min_consecutive_speech_delay=0.0,
         resume_false_interruption=False,
         user_away_timeout=15.0,
         false_interruption_timeout=2.0,

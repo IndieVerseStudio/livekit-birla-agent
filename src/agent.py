@@ -568,11 +568,16 @@ async def entrypoint(ctx: JobContext):
         vad=silero.VAD.load(
         ),
         allow_interruptions=True,
+        discard_audio_if_uninterruptible=False
         min_interruption_duration=0.1,
+        min_interruption_words=0,
         min_endpointing_delay=0.1,
         max_endpointing_delay=0.5,
         resume_false_interruption=False,
-        discard_audio_if_uninterruptible=False
+        user_away_timeout=15.0,
+        false_interruption_timeout=2.0,
+        resume_false_interruption=False,
+        min_consecutive_speech_delay=0.0,
     )
 
     # To use a realtime model instead of a voice pipeline, use the following session setup instead:

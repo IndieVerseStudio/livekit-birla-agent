@@ -562,23 +562,17 @@ async def entrypoint(ctx: JobContext):
 
     # Set up a voice AI pipeline using OpenAI, Cartesia, Deepgram, and the LiveKit turn detector
     session = AgentSession(
-        # A Large Language Model (LLM) is your agent's brain, processing user input and generating a response
-        # See all providers at https://docs.livekit.io/agents/integrations/llm/
         llm=google.LLM(model="gemini-2.5-flash"),
-        # Speech-to-text (STT) is your agent's ears, turning the user's speech into text that the LLM can understand
-        # See all providers at https://docs.livekit.io/agents/integrations/stt/
         stt=google.STT(model="telephony", spoken_punctuation=False, languages=["en-IN", "hi-IN", "en-US"], use_streaming=True),
-        # Text-to-speech (TTS) is your agent's voice, turning the LLM's text into speech that the user can hear
-        # See all providers at https://docs.livekit.io/agents/integrations/tts/
-        # tts=sarvam.TTS(target_language_code="hi-IN", speaker="anushka",enable_preprocessing=True),
         tts=google.TTS(gender="female", voice_name="hi-IN-Chirp3-HD-Achernar", language="hi-IN", use_streaming=True),
-        # VAD and turn detection are used to determine when the user is speaking and when the agent should respond
-        # See more at https://docs.livekit.io/agents/build/turns
-        turn_detection=MultilingualModel(),
-        vad=ctx.proc.userdata["vad"],
-        # allow the LLM to generate a response while waiting for the end of turn
-        # See more at https://docs.livekit.io/agents/build/audio/#preemptive-generation
-        preemptive_generation=True,
+        vad=silero.VAD.load(
+        ),
+        allow_interruptions=True,
+        min_interruption_duration=0.1,
+        min_endpointing_delay=0.1,
+        max_endpointing_delay=0.5,
+        resume_false_interruption=False,
+        discard_audio_if_uninterruptible=False
     )
 
     # To use a realtime model instead of a voice pipeline, use the following session setup instead:
@@ -588,11 +582,7 @@ async def entrypoint(ctx: JobContext):
     # )
 
     # sometimes background noise could interrupt the agent session, these are considered false positive interruptions
-    # when it's detected, you may resume the agent's speech
-    @session.on("agent_false_interruption")
-    def _on_agent_false_interruption(ev: AgentFalseInterruptionEvent):
-        logger.info("false positive interruption, resuming")
-        session.generate_reply(instructions=ev.extra_instructions or NOT_GIVEN)
+    # when it's detected, you may resume the agent's speec
 
     # Metrics collection, to measure pipeline performance
     # For more information, see https://docs.livekit.io/agents/build/metrics/
@@ -625,7 +615,7 @@ async def entrypoint(ctx: JobContext):
             # LiveKit Cloud enhanced noise cancellation
             # - If self-hosting, omit this parameter
             # - For telephony applications, use `BVCTelephony` for best results
-            noise_cancellation=noise_cancellation.BVC(),
+            # noise_cancellation=noise_cancellation.BVC(),
         ),
     )
 

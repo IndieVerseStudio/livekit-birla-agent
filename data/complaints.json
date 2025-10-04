@@ -54,5 +54,51 @@
     "category": "General enquiries/Others",
     "sub_category": "Other Enquiries",
     "issue": "Become a Painter/Contractor"
+  },
+  {
+    "enquiry_number": "ENQ202510030005",
+    "opus_id": "34567",
+    "customer_name": "Arjun Singh",
+    "type": "enquiry",
+    "enquiry_type": "KYC Guidance",
+    "subject": "KYC Rejected - Document Submission Required",
+    "description": "Customer's KYC has been rejected. Aadhar, PAN, Bank Details, and UPI documents are missing. Customer requires guidance on how to complete the KYC process.",
+    "status": "logged",
+    "created_date": "2025-10-03T02:19:11.172341",
+    "category": "General enquiries/Others",
+    "sub_category": "Other Enquiries",
+    "issue": "Become a Painter/Contractor"
+  },
+  {
+    "complaint_number": "KYC202510030006",
+    "opus_id": "PC-034567",
+    "customer_name": "Arjun Singh",
+    "type": "Opus ID App",
+    "subject": "Account Blocked - Automatic Block",
+    "issue_description": "Automatic block has exceeded 48 hours. Please investigate.",
+    "priority": "High",
+    "status": "active",
+    "created_date": "2025-10-03T03:50:38.607715",
+    "timeline_days": 7,
+    "expected_resolution": "2025-10-10T03:50:38.607721",
+    "category": "Painter/contractor Complaints",
+    "sub_category": "Opus ID App",
+    "escalation_level": "standard"
+  },
+  {
+    "complaint_number": "KYC202510030007",
+    "opus_id": "PC-090123",
+    "customer_name": "Siddharth Jain",
+    "type": "KYC Approval",
+    "subject": "Incorrect KYC Information Provided and Partial KYC Status",
+    "issue_description": "Customer states that incorrect information was provided regarding required KYC documents (Aadhar/PAN and Bank/UPI). Customer had provided Aadhar, PAN, and Bank details, but system shows PAN and UPI as pending, leading to partial KYC. Customer was previously told only one of Aadhar/PAN and one of Bank/UPI was required. Complaint to investigate misleading information and expedite KYC completion.",
+    "priority": "High",
+    "status": "active",
+    "created_date": "2025-10-03T04:02:35.748700",
+    "timeline_days": 7,
+    "expected_resolution": "2025-10-10T04:02:35.748704",
+    "category": "Painter/contractor Complaints",
+    "sub_category": "Opus ID App",
+    "escalation_level": "standard"
   }
 ]

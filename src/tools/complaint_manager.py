@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 from typing import Dict, Any, List
 import uuid
 from livekit.agents import function_tool
+from livekit.agents import RunContext
 
 
 def _get_complaints_file_path() -> str:
@@ -43,23 +44,15 @@ def _save_complaints(complaints: List[Dict]) -> None:
         json.dump(complaints, file, indent=2, ensure_ascii=False)
 
 @function_tool()
-async def auto_create_complaint_tool(opus_id: str, customer_name: str, days_since_kyc: int) -> Dict[str, Any]:
-    """Automatically create a complaint if customer has been waiting more than 30 days since KYC completion.
-    
-    Args:
-        opus_id: Customer's Opus ID
-        customer_name: Customer's full name
-        days_since_kyc: Number of days since KYC completion
-        
-    Returns:
-        Dictionary containing complaint creation details or info if no complaint needed.
-    """
+async def auto_create_complaint_tool(self, context: RunContext, opus_id: str, customer_name: str, days_since_kyc: int) -> dict:
+    """Automatically create a complaint if customer has been waiting more than 30 days since KYC completion."""
     try:
         # If more than 30 days, automatically create a complaint
         if days_since_kyc > 30:
             kyc_completion_date = (datetime.now() - timedelta(days=days_since_kyc)).strftime("%Y-%m-%d")
             
-            complaint_result = await create_complaint_tool(
+            complaint_result = await self.create_complaint_tool(
+                context=context,
                 opus_id=opus_id,
                 customer_name=customer_name,
                 complaint_type="high_priority",
@@ -102,21 +95,9 @@ async def auto_create_complaint_tool(opus_id: str, customer_name: str, days_sinc
         }
 
 @function_tool()
-async def create_complaint_tool(opus_id: str, customer_name: str, complaint_type: str, 
-                    subject: str, issue_description: str, priority: str) -> Dict[str, Any]:
-    """Create a new complaint.
-    
-    Args:
-        opus_id: Customer's Opus ID
-        customer_name: Customer's full name
-        complaint_type: Type of complaint (high_priority, standard, enquiry)
-        subject: Complaint subject line
-        issue_description: Detailed description of the issue
-        priority: Priority level (high, standard)
-        
-    Returns:
-        Dictionary containing complaint creation details.
-    """
+async def create_complaint_tool(self, context: RunContext, opus_id: str, customer_name: str, complaint_type: str, 
+                subject: str, issue_description: str, priority: str) -> dict:
+    """Create a new complaint."""
     try:
         complaints = _load_complaints()
         
@@ -165,20 +146,9 @@ async def create_complaint_tool(opus_id: str, customer_name: str, complaint_type
         }
 
 @function_tool()
-async def create_enquiry_tool(opus_id: str, customer_name: str, enquiry_type: str, 
-                  subject: str, description: str) -> Dict[str, Any]:
-    """Create a new enquiry (for informational purposes).
-    
-    Args:
-        opus_id: Customer's Opus ID
-        customer_name: Customer's full name
-        enquiry_type: Type of enquiry
-        subject: Enquiry subject
-        description: Enquiry description
-        
-    Returns:
-        Dictionary containing enquiry creation details.
-    """
+async def create_enquiry_tool(self, context: RunContext, opus_id: str, customer_name: str, enquiry_type: str, 
+                subject: str, description: str) -> dict:
+    """Create a new enquiry (for informational purposes)."""
     try:
         complaints = _load_complaints()
         
@@ -217,4 +187,3 @@ async def create_enquiry_tool(opus_id: str, customer_name: str, enquiry_type: st
             "success": False,
             "error": f"Error creating enquiry: {str(e)}"
         }
-

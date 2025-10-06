@@ -1,13 +1,8 @@
-"""
-Customer lookup tools for KYC Customer Care Bot.
-- Look up by mobile number
-- Look up by Opus ID
-"""
-
 import csv
 import os
 from typing import Dict, Any, List
 from livekit.agents import function_tool
+from livekit.agents import RunContext
 
 def _get_data_file_path() -> str:
     """Helper to get the absolute path to the mock data file."""
@@ -52,11 +47,8 @@ def _find_customers(key: str, value: str) -> List[Dict[str, Any]]:
     return accounts
 
 @function_tool()
-async def customer_lookup_tool(mobile_number: str) -> str:
-    """
-    Looks up customer details using their 10-digit mobile number.
-    Use this tool when the customer confirms they are calling from their registered number.
-    """
+async def customer_lookup_tool(self, context: RunContext, mobile_number: str) -> str:
+    """Looks up customer details using their 10-digit mobile number."""
     try:
         clean_phone = ''.join(filter(str.isdigit, mobile_number))
         if len(clean_phone) != 10:
@@ -65,7 +57,7 @@ async def customer_lookup_tool(mobile_number: str) -> str:
         accounts = _find_customers('mobile_number', clean_phone)
 
         if not accounts:
-            return f"No accounts found for mobile number {mobile_number}."
+            return f"PHONE_LOOKUP_FAILED: No accounts found for mobile number {mobile_number}. Please ask customer for their Opus ID for verification."
         
         return f"Found {len(accounts)} account(s): {accounts}. Multiple accounts: {len(accounts) > 1}."
 
@@ -73,11 +65,8 @@ async def customer_lookup_tool(mobile_number: str) -> str:
         return f"An error occurred during customer lookup: {str(e)}"
 
 @function_tool()
-async def customer_lookup_by_opus_id_tool(opus_id: str) -> str:
-    """
-    Looks up customer details using their Opus ID.
-    Use this tool when the customer provides their Opus ID for verification.
-    """
+async def customer_lookup_by_opus_id_tool(self, context: RunContext, opus_id: str) -> str:
+    """Looks up customer details using their Opus ID."""
     try:
         if not opus_id:
             return "Opus ID was not provided."
@@ -87,7 +76,6 @@ async def customer_lookup_by_opus_id_tool(opus_id: str) -> str:
         if not accounts:
             return f"No account found for Opus ID {opus_id}."
         
-        # Assuming Opus ID is unique, so we expect only one account
         return f"Found account: {accounts[0]}."
 
     except Exception as e:

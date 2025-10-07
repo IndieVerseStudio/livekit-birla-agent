@@ -7,6 +7,7 @@ and routes them to the appropriate instruction flow.
 
 import re
 from typing import Dict, Tuple
+from livekit.agents import function_tool, RunContext 
 
 
 class IntentClassifier:
@@ -233,4 +234,13 @@ def get_intent_clarification_questions_func() -> Dict:
         'usage_tip': 'Keep questions SHORT and concise when intent is unclear. Use the specific phrase for general questions.'
     }
 
+@function_tool()
+async def classify_customer_intent(context: RunContext, customer_query: str) -> dict:
+    """Classify customer intent based on their initial query/complaint."""
+    return classify_customer_intent_func(customer_query)
+
+@function_tool()
+async def get_intent_clarification_questions(context: RunContext) -> dict:
+    """Get clarifying questions to ask when customer intent is unclear."""
+    return get_intent_clarification_questions_func()
 

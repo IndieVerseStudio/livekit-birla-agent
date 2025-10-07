@@ -1,14 +1,9 @@
-"""
-Complaint Management tool for KYC Customer Care Bot.
-Handles complaint creation, tracking, and status management.
-"""
-
 import json
 import os
 from datetime import datetime, timedelta
 from typing import Dict, Any, List, Optional
 import uuid
-from livekit.agents import function_tool
+from livekit.agents import function_tool, RunContext
 
 
 def _get_complaints_file_path() -> str:
@@ -43,74 +38,60 @@ def _save_complaints(complaints: List[Dict]) -> None:
         json.dump(complaints, file, indent=2, ensure_ascii=False)
 
 @function_tool()
-async def auto_create_complaint_tool(opus_id: str, customer_name: str, days_since_kyc: int) -> Dict[str, Any]:
-    """Prepare a complaint recommendation if >30 days since KYC; do not create without consent.
-    
-    Args:
-        opus_id: Customer's Opus ID
-        customer_name: Customer's full name
-        days_since_kyc: Number of days since KYC completion
-        
-    Returns:
-        Dictionary containing complaint recommendation or timeline info.
-    """
+async def auto_create_complaint_tool(context: RunContext, opus_id: str, customer_name: str, days_since_kyc: int) -> dict:
+    """Automatically create a complaint if customer has been waiting more than 30 days since KYC completion."""
     try:
+        # If more than 30 days, automatically create a complaint
         if days_since_kyc > 30:
             kyc_completion_date = (datetime.now() - timedelta(days=days_since_kyc)).strftime("%Y-%m-%d")
-            proposed = {
-                "complaint_type": "high_priority",
-                "subject": f"KYC Account Approval Delay - {days_since_kyc} days pending",
-                "issue_description": (
-                    f"Customer's KYC was completed on {kyc_completion_date} but account approval "
-                    f"is still pending after {days_since_kyc} days."
-                ),
-                "priority": "high",
-            }
-            return {
-                "success": True,
-                "auto_complaint_created": False,
-                "requires_confirmation": True,
-                "recommendation": "create_complaint",
-                "days_since_kyc": days_since_kyc,
-                "message": (
-                    "Complaint recommended due to KYC delay beyond 30 days. Seek explicit user consent "
-                    "before creating the complaint."
-                ),
-                "proposed_complaint": proposed,
-            }
+            
+            complaint_result = await create_complaint_tool(
+                context=context,
+                opus_id=opus_id,
+                customer_name=customer_name,
+                complaint_type="high_priority",
+                subject=f"KYC Account Approval Delay - {days_since_kyc} days pending",
+                issue_description=f"Customer's KYC was completed on {kyc_completion_date} but account approval is still pending after {days_since_kyc} days.",
+                priority="high"
+            )
+            
+            if complaint_result.get("success"):
+                return {
+                    "success": True,
+                    "auto_complaint_created": True,
+                    "days_since_kyc": days_since_kyc,
+                    "complaint_number": complaint_result.get("complaint_number"),
+                    "message": f"Main aapke liye complaint create kar diya hun kyunki {days_since_kyc} din se zyada ho gaye hain. Aapka complaint number hai {complaint_result.get('complaint_number')}. Aap apne TSM se bhi contact kar sakte hain.",
+                    "sms_confirmation": complaint_result.get("sms_confirmation"),
+                    "complaint_details": complaint_result.get("complaint_details")
+                }
+            else:
+                return {
+                    "success": False,
+                    "error": f"Failed to create auto-complaint: {complaint_result.get('error')}"
+                }
         else:
+            # Within 30 days, no complaint needed
             days_remaining = 30 - days_since_kyc
             return {
                 "success": True,
                 "auto_complaint_created": False,
-                "requires_confirmation": False,
-                "recommendation": "none",
                 "days_since_kyc": days_since_kyc,
                 "days_remaining": days_remaining,
-                "message": (
-                    f"KYC was completed {days_since_kyc} days ago. Please wait {days_remaining} more days for "
-                    "account approval. You may also contact your TSM."
-                ),
+                "message": f"Aapka KYC {days_since_kyc} din pehle complete hua tha. Aapko {days_remaining} din aur wait karna hoga account approval ke liye. Aap apne TSM se bhi contact kar sakte hain.",
+                "tsm_message": "Aap apne TSM se contact kar sakte hain additional support ke liye."
             }
+        
     except Exception as e:
-        return {"success": False, "error": f"Error preparing complaint recommendation: {str(e)}"}
+        return {
+            "success": False,
+            "error": f"Error in auto-complaint creation: {str(e)}"
+            }
 
 @function_tool()
-async def create_complaint_tool(opus_id: str, customer_name: str, complaint_type: str, 
-                    subject: str, issue_description: str, priority: str) -> Dict[str, Any]:
-    """Create a new complaint.
-    
-    Args:
-        opus_id: Customer's Opus ID
-        customer_name: Customer's full name
-        complaint_type: Type of complaint (high_priority, standard, enquiry)
-        subject: Complaint subject line
-        issue_description: Detailed description of the issue
-        priority: Priority level (high, standard)
-        
-    Returns:
-        Dictionary containing complaint creation details.
-    """
+async def create_complaint_tool(context: RunContext, opus_id: str, customer_name: str, complaint_type: str, 
+                subject: str, issue_description: str, priority: str) -> dict:
+    """Create a new complaint."""
     try:
         complaints = _load_complaints()
         
@@ -159,20 +140,9 @@ async def create_complaint_tool(opus_id: str, customer_name: str, complaint_type
         }
 
 @function_tool()
-async def create_enquiry_tool(opus_id: str, customer_name: str, enquiry_type: str, 
-                  subject: str, description: str) -> Dict[str, Any]:
-    """Create a new enquiry (for informational purposes).
-    
-    Args:
-        opus_id: Customer's Opus ID
-        customer_name: Customer's full name
-        enquiry_type: Type of enquiry
-        subject: Enquiry subject
-        description: Enquiry description
-        
-    Returns:
-        Dictionary containing enquiry creation details.
-    """
+async def create_enquiry_tool(context: RunContext, opus_id: str, customer_name: str, enquiry_type: str, 
+                subject: str, description: str) -> dict:
+    """Create a new enquiry (for informational purposes)."""
     try:
         complaints = _load_complaints()
         
@@ -212,9 +182,10 @@ async def create_enquiry_tool(opus_id: str, customer_name: str, enquiry_type: st
             "error": f"Error creating enquiry: {str(e)}"
         }
 
-
+##-----------Need to Check these tools-----------------------
 @function_tool()
 async def create_record_from_code_history(
+    context: RunContext,
     opus_id: str,
     customer_name: str,
     coupon_code: str,
@@ -339,6 +310,7 @@ async def create_record_from_code_history(
 
 @function_tool()
 async def create_record_from_account_block(
+    context: RunContext,
     opus_id: str,
     customer_name: str,
     block_status: str,
@@ -486,9 +458,9 @@ async def create_record_from_account_block(
 
 @function_tool()
 async def ensure_record_creation_tool(
+    context: RunContext,
     opus_id: str,
     customer_name: str,
-    context: Dict[str, Any]
 ) -> Dict[str, Any]:
     """Ensure an enquiry/complaint record exists for this conversation.
 

@@ -6,7 +6,7 @@ Verifies if customer is calling from registered phone number.
 import csv
 import os
 from typing import Dict, Any, List
-from livekit.agents import function_tool
+from livekit.agents import function_tool, RunContext
 
 
 def _get_data_file_path() -> str:
@@ -15,17 +15,9 @@ def _get_data_file_path() -> str:
     return os.path.join(project_root, "data", "mock.csv")
 
 @function_tool()
-async def verify_phone_number(phone_number: str) -> Dict[str, Any]:
-    """Verify if phone number is registered and get associated accounts.
-    
-    Args:
-        phone_number: The phone number to verify (10-digit number)
-        
-    Returns:
-        Dictionary containing verification status and associated accounts.
-    """
+async def verify_phone_number(context: RunContext, phone_number: str) -> dict:
+    """Verify if phone number is registered and get associated accounts."""
     try:
-        # Clean the phone number
         clean_phone = ''.join(filter(str.isdigit, phone_number))
         
         if len(clean_phone) != 10:
@@ -42,7 +34,6 @@ async def verify_phone_number(phone_number: str) -> Dict[str, Any]:
                 "error": f"Customer data file not found at {data_file}"
             }
         
-        # Search for accounts with this phone number
         accounts = []
         with open(data_file, 'r', encoding='utf-8') as file:
             csv_reader = csv.DictReader(file)
@@ -81,8 +72,6 @@ async def verify_phone_number(phone_number: str) -> Dict[str, Any]:
             "success": False,
             "error": f"Error during phone verification: {str(e)}"
         }
-
-
 
 
 

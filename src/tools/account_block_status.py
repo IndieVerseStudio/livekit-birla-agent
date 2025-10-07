@@ -9,6 +9,7 @@ import csv
 import os
 from datetime import datetime, timedelta
 from typing import Any, Dict, Optional
+from livekit.agents import function_tool, RunContext
 
 
 def _get_data_file_path() -> str:
@@ -286,3 +287,11 @@ def check_account_block_status(
 # Export the main function for LiveKit use
 # The agent.py will wrap this with @function_tool() decorator
 account_block_status_func = check_account_block_status
+
+@function_tool()
+async def account_block_status_tool(context: RunContext, 
+                                    opus_id: str = None,
+                                    mobile_number: str = None) -> dict:
+    """Check account block status and provide recommendations."""
+    return account_block_status_func(opus_id=opus_id, mobile_number=mobile_number)
+

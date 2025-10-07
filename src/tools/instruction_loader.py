@@ -6,6 +6,7 @@ This tool loads the appropriate instruction flow based on the identified custome
 
 import os
 from typing import Dict, Optional
+from livekit.agents import function_tool, RunContext
 
 
 class InstructionLoader:
@@ -240,4 +241,12 @@ def validate_instruction_files_func() -> Dict:
         'instructions_directory': _instruction_loader.instructions_dir
     }
 
+@function_tool()
+async def load_instructions_for_intent(context: RunContext, intent: str, scenario: str = None) -> dict:
+    """Load the appropriate instruction flow based on customer intent."""
+    return load_instructions_for_intent_func(intent, scenario)
 
+@function_tool()
+async def get_available_instruction_flows(context: RunContext) -> dict:
+    """Get list of all available instruction flows."""
+    return get_available_instruction_flows_func()

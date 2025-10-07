@@ -7,7 +7,7 @@ import csv
 import os
 from datetime import datetime, timedelta
 from typing import Dict, Any
-from livekit.agents import function_tool
+from livekit.agents import function_tool, RunContext
 
 def _get_data_file_path() -> str:
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -15,15 +15,8 @@ def _get_data_file_path() -> str:
     return os.path.join(project_root, "data", "mock.csv")
 
 @function_tool()
-async def kyc_status_checker_tool(opus_id: str) -> Dict[str, Any]:
-    """Check KYC status and calculate timeline for account approval.
-    
-    Args:
-        opus_id: The Opus ID to check KYC status for
-        
-    Returns:
-        Dictionary containing KYC status, timeline information, and recommendations.
-    """
+async def kyc_status_checker_tool(context: RunContext, opus_id: str) -> dict:
+    """Check KYC status and calculate timeline for account approval."""
     try:
         data_file = _get_data_file_path()
         
@@ -133,9 +126,4 @@ async def kyc_status_checker_tool(opus_id: str) -> Dict[str, Any]:
             "success": False,
             "error": f"Error checking KYC status: {str(e)}"
         }
-
-
-
-
-
 

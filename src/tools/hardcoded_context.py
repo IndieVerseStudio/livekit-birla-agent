@@ -4,7 +4,7 @@ from typing import Dict, Any
 from livekit.agents import function_tool
 
 @function_tool()
-async def hardcoded_context_tool(self, context: RunContext) -> str:
+async def hardcoded_context_tool(context: RunContext) -> str:
     """Get hardcoded context including the caller's phone number."""
     try:
         phone_number = "9812345769"
@@ -14,7 +14,7 @@ async def hardcoded_context_tool(self, context: RunContext) -> str:
 
 
 @function_tool()
-async def set_caller_context_tool(self, context: RunContext, phone_number: str) -> str:
+async def set_caller_context_tool(context: RunContext, phone_number: str) -> str:
     """Set caller context with a specific phone number."""
     try:
         context_data = {

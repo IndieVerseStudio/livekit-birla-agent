@@ -16,7 +16,7 @@ def _get_data_file_path() -> str:
     return os.path.join(project_root, "data", "mock.csv")
 
 @function_tool()
-async def kyc_status_checker_tool(self, context: RunContext, opus_id: str) -> dict:
+async def kyc_status_checker_tool(context: RunContext, opus_id: str) -> dict:
     """Check KYC status and calculate timeline for account approval."""
     try:
         data_file = _get_data_file_path()

@@ -1,0 +1,501 @@
+id,code_history_id,latitude,longitude,scan_from,pincode,propix_response,scan_method,coupon_image,scan_message,coupon_url,product_sku_code,product_sku_name
+1,1,13.807511,72.306275,P,257331,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHDPBHSAHXTH.jpg,Expired,https://qrs.opus.example/CASHDPBHSAHXTH,SKU-1DNMMJ,Opus Interior Emulsion 10L
+2,2,11.576798,82.582536,A,257331,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH45NQ4FMYZY.jpg,Expired,https://qrs.opus.example/CASH45NQ4FMYZY,SKU-FN9XUY,Opus Interior Emulsion 10L
+3,3,24.554459,76.443199,A,257331,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYFF0T0PVN9E.jpg,Already used,https://qrs.opus.example/LOYFF0T0PVN9E,SKU-CN9T84,Opus Interior Emulsion 10L
+4,4,24.861593,72.789046,A,257331,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH4SHNF877VR.jpg,Pending manual check,https://qrs.opus.example/CASH4SHNF877VR,SKU-IUC039,Opus Putty 30kg
+5,5,25.96638,69.417147,A,257331,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHPSEIMVIHCW.jpg,Invalid QR,https://qrs.opus.example/CASHPSEIMVIHCW,SKU-IYHE7U,Opus Gloss Enamel 1L
+6,6,11.248861,73.635125,A,630040,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHW9XA3KX7EE.jpg,Scan successful,https://qrs.opus.example/CASHW9XA3KX7EE,SKU-HMY4SJ,Opus Interior Emulsion 10L
+7,7,8.833803,75.156185,A,630040,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHUE8YFBNTPB.jpg,Expired,https://qrs.opus.example/CASHUE8YFBNTPB,SKU-YYMU59,Opus Exterior WeatherGuard 20L
+8,8,26.064976,87.337782,P,630040,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHNBQH7M35IX.jpg,Scan successful,https://qrs.opus.example/CASHNBQH7M35IX,SKU-KXO9T7,Opus Interior Emulsion 10L
+9,9,9.462453,81.284754,P,630040,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHE6GBPS3Y70.jpg,Pending manual check,https://qrs.opus.example/CASHE6GBPS3Y70,SKU-LL4ZKL,Opus Gloss Enamel 1L
+10,10,13.931136,81.277077,A,630040,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHKPUXQPHR62.jpg,Expired,https://qrs.opus.example/CASHKPUXQPHR62,SKU-WD8IL3,Opus Exterior WeatherGuard 20L
+11,11,19.273858,87.998157,A,787965,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHGJLQM5K8P4.jpg,Invalid QR,https://qrs.opus.example/CASHGJLQM5K8P4,SKU-MX2X18,Opus Exterior WeatherGuard 20L
+12,12,12.145092,79.841957,A,787965,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHGV0E38DALY.jpg,Already used,https://qrs.opus.example/CASHGV0E38DALY,SKU-3IZKY2,Opus Putty 30kg
+13,13,25.257853,79.849492,P,787965,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH8W3ZP08J3T.jpg,Expired,https://qrs.opus.example/CASH8W3ZP08J3T,SKU-LI7KQ1,Opus Putty 30kg
+14,14,14.399706,79.631112,P,787965,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYUSGIOTIRZQ.jpg,Scan successful,https://qrs.opus.example/LOYUSGIOTIRZQ,SKU-RTP0LZ,Opus Primer 5L
+15,15,26.150839,77.817574,A,787965,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH09SKDGIGAT.jpg,Expired,https://qrs.opus.example/CASH09SKDGIGAT,SKU-5UQPGB,Opus Gloss Enamel 1L
+16,16,13.581475,70.620265,P,809897,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHQLL8OS9XTO.jpg,Pending manual check,https://qrs.opus.example/CASHQLL8OS9XTO,SKU-K5RBW2,Opus Exterior WeatherGuard 20L
+17,17,23.174466,84.749518,P,809897,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYORQQFGV0EC.jpg,Invalid QR,https://qrs.opus.example/LOYORQQFGV0EC,SKU-UX5QRL,Opus Putty 30kg
+18,18,28.272097,69.496565,P,809897,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH92XF8E8LD4.jpg,Pending manual check,https://qrs.opus.example/CASH92XF8E8LD4,SKU-2JWOCL,Opus Putty 30kg
+19,19,19.827896,83.850389,A,809897,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH1ZDFKBLCMP.jpg,Expired,https://qrs.opus.example/CASH1ZDFKBLCMP,SKU-GC5WI6,Opus Exterior WeatherGuard 20L
+20,20,24.266713,87.472056,A,809897,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYQK94DNMKZA.jpg,Invalid QR,https://qrs.opus.example/LOYQK94DNMKZA,SKU-60361I,Opus Primer 5L
+21,21,24.510679,72.758632,P,320729,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHHH5LF6A4FE.jpg,Expired,https://qrs.opus.example/CASHHH5LF6A4FE,SKU-LGB0S0,Opus Gloss Enamel 1L
+22,22,16.991166,83.861922,P,320729,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH94PDZP6LFE.jpg,Expired,https://qrs.opus.example/CASH94PDZP6LFE,SKU-EX5T5P,Opus Exterior WeatherGuard 20L
+23,23,10.165252,78.148251,A,320729,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYDD03UVULEM.jpg,Pending manual check,https://qrs.opus.example/LOYDD03UVULEM,SKU-FR4MUE,Opus Primer 5L
+24,24,24.235864,79.351871,P,320729,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHMGFXC08DTN.jpg,Expired,https://qrs.opus.example/CASHMGFXC08DTN,SKU-DBFWYJ,Opus Gloss Enamel 1L
+25,25,10.699981,78.651647,A,320729,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYRYBOVAKHEJ.jpg,Already used,https://qrs.opus.example/LOYRYBOVAKHEJ,SKU-IUYMO0,Opus Gloss Enamel 1L
+26,26,27.604246,74.191638,A,351246,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYCDYK0X65MU.jpg,Scan successful,https://qrs.opus.example/LOYCDYK0X65MU,SKU-N23Y30,Opus Putty 30kg
+27,27,24.115944,84.180874,P,351246,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYFK2ST0SX5W.jpg,Already used,https://qrs.opus.example/LOYFK2ST0SX5W,SKU-FPOYIP,Opus Primer 5L
+28,28,17.390772,78.267055,A,351246,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYSPFHV5BRN7.jpg,Invalid QR,https://qrs.opus.example/LOYSPFHV5BRN7,SKU-3D6357,Opus Gloss Enamel 1L
+29,29,12.966681,70.436967,A,351246,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY2EK3ZEZQAC.jpg,Invalid QR,https://qrs.opus.example/LOY2EK3ZEZQAC,SKU-IXWC4R,Opus Putty 30kg
+30,30,13.039532,81.142088,P,351246,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYSM8T2SA5BN.jpg,Invalid QR,https://qrs.opus.example/LOYSM8T2SA5BN,SKU-DU1EMM,Opus Exterior WeatherGuard 20L
+31,31,22.87681,86.546489,A,556080,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHGZ9389YZTK.jpg,Expired,https://qrs.opus.example/CASHGZ9389YZTK,SKU-W2SEHE,Opus Gloss Enamel 1L
+32,32,25.376068,78.362043,A,556080,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHOOUELCQSE3.jpg,Pending manual check,https://qrs.opus.example/CASHOOUELCQSE3,SKU-KF7I8S,Opus Primer 5L
+33,33,18.408995,80.54328,A,556080,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYFXZV4U3BBX.jpg,Expired,https://qrs.opus.example/LOYFXZV4U3BBX,SKU-K8R2YK,Opus Interior Emulsion 10L
+34,34,23.071584,71.796682,P,556080,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOY9ENULQJIDK.jpg,Pending manual check,https://qrs.opus.example/LOY9ENULQJIDK,SKU-F9Q5RD,Opus Gloss Enamel 1L
+35,35,15.799845,87.735753,A,556080,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYP501NOUHTC.jpg,Pending manual check,https://qrs.opus.example/LOYP501NOUHTC,SKU-UNFVOB,Opus Interior Emulsion 10L
+36,36,17.978674,71.989119,A,842768,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYWVIYTWBOZD.jpg,Invalid QR,https://qrs.opus.example/LOYWVIYTWBOZD,SKU-8LX6DU,Opus Putty 30kg
+37,37,14.911298,82.622385,A,842768,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHUD9K9TR74Q.jpg,Expired,https://qrs.opus.example/CASHUD9K9TR74Q,SKU-XZAMKY,Opus Exterior WeatherGuard 20L
+38,38,22.338939,86.46212,A,842768,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH7ANQJLUUJM.jpg,Invalid QR,https://qrs.opus.example/CASH7ANQJLUUJM,SKU-51YW7N,Opus Exterior WeatherGuard 20L
+39,39,18.875138,70.3248,P,842768,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOY1YV2STN7E3.jpg,Pending manual check,https://qrs.opus.example/LOY1YV2STN7E3,SKU-HUDS3Q,Opus Putty 30kg
+40,40,27.167705,75.549927,P,842768,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYUBMC97C7BO.jpg,Invalid QR,https://qrs.opus.example/LOYUBMC97C7BO,SKU-C85E4E,Opus Putty 30kg
+41,41,23.918045,74.404666,P,380997,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOY6ZZOILKQXL.jpg,Invalid QR,https://qrs.opus.example/LOY6ZZOILKQXL,SKU-HLB50A,Opus Putty 30kg
+42,42,21.181664,69.359359,P,380997,200 OK,C,https://azure.blob.core.windows.net/coupons/LOYQ0MFTG698S.jpg,Pending manual check,https://qrs.opus.example/LOYQ0MFTG698S,SKU-FHQCW7,Opus Gloss Enamel 1L
+43,43,22.29647,84.957342,A,380997,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH36DDFGS3JO.jpg,Expired,https://qrs.opus.example/CASH36DDFGS3JO,SKU-X41DNT,Opus Interior Emulsion 10L
+44,44,25.152436,84.418048,P,380997,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOY6YUJ7YKTXG.jpg,Scan successful,https://qrs.opus.example/LOY6YUJ7YKTXG,SKU-7KUU4Y,Opus Putty 30kg
+45,45,14.173431,72.928996,A,380997,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHVWV8LW2QIT.jpg,Already used,https://qrs.opus.example/CASHVWV8LW2QIT,SKU-CJN2FO,Opus Primer 5L
+46,46,13.407632,78.213525,A,833583,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYZ3V6DIXFWU.jpg,Expired,https://qrs.opus.example/LOYZ3V6DIXFWU,SKU-SUUQO1,Opus Putty 30kg
+47,47,27.435379,82.80979,A,833583,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHRRPZLK3E4X.jpg,Scan successful,https://qrs.opus.example/CASHRRPZLK3E4X,SKU-STLPQ2,Opus Exterior WeatherGuard 20L
+48,48,16.20417,70.284641,A,833583,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHH13CD5GLQJ.jpg,Scan successful,https://qrs.opus.example/CASHH13CD5GLQJ,SKU-MQGY27,Opus Putty 30kg
+49,49,20.945669,85.310445,P,833583,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHENGWYX9TRF.jpg,Expired,https://qrs.opus.example/CASHENGWYX9TRF,SKU-8RHNUX,Opus Gloss Enamel 1L
+50,50,23.026687,78.927065,P,833583,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH2U1RSUJT9T.jpg,Expired,https://qrs.opus.example/CASH2U1RSUJT9T,SKU-9D31K9,Opus Gloss Enamel 1L
+51,51,10.156912,75.351234,A,178001,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYREIYAZ39PE.jpg,Expired,https://qrs.opus.example/LOYREIYAZ39PE,SKU-KN35XY,Opus Interior Emulsion 10L
+52,52,18.649022,82.956873,A,178001,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY1VN8LFJDTV.jpg,Already used,https://qrs.opus.example/LOY1VN8LFJDTV,SKU-KB68RE,Opus Gloss Enamel 1L
+53,53,27.24733,87.486268,P,178001,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYAH78OKZ1PO.jpg,Invalid QR,https://qrs.opus.example/LOYAH78OKZ1PO,SKU-FLV1XX,Opus Primer 5L
+54,54,23.318359,70.361134,P,178001,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHEZZF8S2ZGE.jpg,Scan successful,https://qrs.opus.example/CASHEZZF8S2ZGE,SKU-6MPSJ9,Opus Interior Emulsion 10L
+55,55,27.141365,74.398703,A,178001,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYYE0A4ABN7G.jpg,Expired,https://qrs.opus.example/LOYYE0A4ABN7G,SKU-3UEYBI,Opus Putty 30kg
+56,56,28.840674,71.955007,A,727550,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYUTDD2EC2IH.jpg,Expired,https://qrs.opus.example/LOYUTDD2EC2IH,SKU-X3D43E,Opus Gloss Enamel 1L
+57,57,15.505443,78.890356,A,727550,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOY5BWIKOTCKE.jpg,Expired,https://qrs.opus.example/LOY5BWIKOTCKE,SKU-R6SNGL,Opus Exterior WeatherGuard 20L
+58,58,15.498567,79.83125,P,727550,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHT2018U9N79.jpg,Scan successful,https://qrs.opus.example/CASHT2018U9N79,SKU-ZMUF84,Opus Gloss Enamel 1L
+59,59,28.075678,75.471816,P,727550,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH3MG25CFZFD.jpg,Pending manual check,https://qrs.opus.example/CASH3MG25CFZFD,SKU-7ODKEF,Opus Gloss Enamel 1L
+60,60,9.626159,74.936202,P,727550,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHE088O98BV7.jpg,Invalid QR,https://qrs.opus.example/CASHE088O98BV7,SKU-LW83Y0,Opus Primer 5L
+61,61,10.637287,76.467498,A,716694,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHRC6ZS62YWE.jpg,Pending manual check,https://qrs.opus.example/CASHRC6ZS62YWE,SKU-9P9W4J,Opus Interior Emulsion 10L
+62,62,20.727309,68.749313,A,716694,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYEFUU8DD225.jpg,Already used,https://qrs.opus.example/LOYEFUU8DD225,SKU-JFVYB6,Opus Primer 5L
+63,63,18.592021,70.712996,A,716694,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYK01L0VDP6O.jpg,Already used,https://qrs.opus.example/LOYK01L0VDP6O,SKU-45BG34,Opus Exterior WeatherGuard 20L
+64,64,12.704842,72.13462,A,716694,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHVG5VMF60YK.jpg,Invalid QR,https://qrs.opus.example/CASHVG5VMF60YK,SKU-XS58YR,Opus Exterior WeatherGuard 20L
+65,65,28.656744,80.811895,A,716694,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYHKSWVA984U.jpg,Already used,https://qrs.opus.example/LOYHKSWVA984U,SKU-5JZ6KF,Opus Exterior WeatherGuard 20L
+66,66,11.938104,86.961687,A,629143,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHLCB8QSSPYE.jpg,Scan successful,https://qrs.opus.example/CASHLCB8QSSPYE,SKU-7OI0E0,Opus Putty 30kg
+67,67,23.022214,70.354691,P,629143,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYBEPEJZHYAP.jpg,Invalid QR,https://qrs.opus.example/LOYBEPEJZHYAP,SKU-EDHHJS,Opus Exterior WeatherGuard 20L
+68,68,13.520213,69.001604,A,629143,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHY64YFDS0DJ.jpg,Invalid QR,https://qrs.opus.example/CASHY64YFDS0DJ,SKU-354MYP,Opus Interior Emulsion 10L
+69,69,16.694979,79.815006,P,629143,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHNMEOQ4YRP5.jpg,Expired,https://qrs.opus.example/CASHNMEOQ4YRP5,SKU-2YGNMB,Opus Exterior WeatherGuard 20L
+70,70,18.566362,77.385779,A,629143,500 Error,M,https://azure.blob.core.windows.net/coupons/LOY0I85SYWP0R.jpg,Expired,https://qrs.opus.example/LOY0I85SYWP0R,SKU-RF1LLK,Opus Putty 30kg
+71,71,15.36177,77.607398,A,505969,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY4Z7WHWKMY9.jpg,Scan successful,https://qrs.opus.example/LOY4Z7WHWKMY9,SKU-UYP04K,Opus Gloss Enamel 1L
+72,72,28.394695,74.25308,P,505969,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYHTMQWYUIXN.jpg,Invalid QR,https://qrs.opus.example/LOYHTMQWYUIXN,SKU-TAJW25,Opus Exterior WeatherGuard 20L
+73,73,14.643253,72.39924,A,505969,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYJF4AQ7B7V1.jpg,Already used,https://qrs.opus.example/LOYJF4AQ7B7V1,SKU-GCSOTD,Opus Exterior WeatherGuard 20L
+74,74,17.312139,68.877033,A,505969,200 OK,C,https://azure.blob.core.windows.net/coupons/LOY6WW8YL68NT.jpg,Invalid QR,https://qrs.opus.example/LOY6WW8YL68NT,SKU-6GS8G8,Opus Putty 30kg
+75,75,14.612849,75.790037,P,505969,500 Error,C,https://azure.blob.core.windows.net/coupons/CASH0FQLDB2UUI.jpg,Already used,https://qrs.opus.example/CASH0FQLDB2UUI,SKU-EAZC0B,Opus Interior Emulsion 10L
+76,76,8.221366,72.777616,A,545285,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH6TT9Q1NI10.jpg,Scan successful,https://qrs.opus.example/CASH6TT9Q1NI10,SKU-89Y1FF,Opus Putty 30kg
+77,77,13.503306,78.887001,A,545285,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHS2N75BXD8W.jpg,Already used,https://qrs.opus.example/CASHS2N75BXD8W,SKU-GXNX4S,Opus Gloss Enamel 1L
+78,78,8.469122,68.862887,A,545285,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYXHGNZEI3ZR.jpg,Pending manual check,https://qrs.opus.example/LOYXHGNZEI3ZR,SKU-UFWBUC,Opus Primer 5L
+79,79,18.924667,86.186784,A,545285,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHV23GXJ0MQV.jpg,Invalid QR,https://qrs.opus.example/CASHV23GXJ0MQV,SKU-Y3VG6V,Opus Putty 30kg
+80,80,9.751787,79.965847,A,545285,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHZP7R1M264U.jpg,Already used,https://qrs.opus.example/CASHZP7R1M264U,SKU-TJA0AS,Opus Putty 30kg
+81,81,21.243532,87.883961,A,579411,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOY3UY8U118QQ.jpg,Expired,https://qrs.opus.example/LOY3UY8U118QQ,SKU-YIL8SA,Opus Primer 5L
+82,82,27.975795,77.853297,P,579411,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHJ8Y6RH05HH.jpg,Pending manual check,https://qrs.opus.example/CASHJ8Y6RH05HH,SKU-A484NL,Opus Putty 30kg
+83,83,13.630632,87.170536,P,579411,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYOYG9ZQYAHU.jpg,Pending manual check,https://qrs.opus.example/LOYOYG9ZQYAHU,SKU-MGPP1N,Opus Gloss Enamel 1L
+84,84,24.413458,74.000684,A,579411,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH4H20RAPE6W.jpg,Already used,https://qrs.opus.example/CASH4H20RAPE6W,SKU-UUOYC3,Opus Gloss Enamel 1L
+85,85,24.881288,74.747766,P,579411,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYHUXG2MYR06.jpg,Already used,https://qrs.opus.example/LOYHUXG2MYR06,SKU-WU4CFI,Opus Primer 5L
+86,86,18.315813,74.838257,A,694498,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHWJWGABTGDJ.jpg,Scan successful,https://qrs.opus.example/CASHWJWGABTGDJ,SKU-L29Q2L,Opus Exterior WeatherGuard 20L
+87,87,10.552758,77.624592,P,694498,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHN9I9H0DXHO.jpg,Already used,https://qrs.opus.example/CASHN9I9H0DXHO,SKU-KMBY9I,Opus Gloss Enamel 1L
+88,88,21.473101,74.946355,P,694498,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHIRYM81CMFT.jpg,Pending manual check,https://qrs.opus.example/CASHIRYM81CMFT,SKU-60AN0J,Opus Interior Emulsion 10L
+89,89,24.218746,72.775731,A,694498,500 Error,M,https://azure.blob.core.windows.net/coupons/CASH5V4FTQ3TQ1.jpg,Already used,https://qrs.opus.example/CASH5V4FTQ3TQ1,SKU-ZXTNSR,Opus Putty 30kg
+90,90,9.671097,84.020399,P,694498,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYDGBXNRWVBH.jpg,Scan successful,https://qrs.opus.example/LOYDGBXNRWVBH,SKU-CU7ONZ,Opus Putty 30kg
+91,91,28.294741,83.056804,A,755372,500 Error,M,https://azure.blob.core.windows.net/coupons/CASH047WWBSLUL.jpg,Already used,https://qrs.opus.example/CASH047WWBSLUL,SKU-UDP2FM,Opus Gloss Enamel 1L
+92,92,11.981236,74.890498,A,755372,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHHW0IC1L7DY.jpg,Invalid QR,https://qrs.opus.example/CASHHW0IC1L7DY,SKU-X1GM32,Opus Putty 30kg
+93,93,19.420266,83.007103,A,755372,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH8753AYEQAH.jpg,Scan successful,https://qrs.opus.example/CASH8753AYEQAH,SKU-TW9ZYN,Opus Putty 30kg
+94,94,27.360714,68.429769,P,755372,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOY5A5XIN9DL5.jpg,Pending manual check,https://qrs.opus.example/LOY5A5XIN9DL5,SKU-ITMOFM,Opus Primer 5L
+95,95,20.143542,81.680973,A,755372,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOY6XDN8WWIIF.jpg,Pending manual check,https://qrs.opus.example/LOY6XDN8WWIIF,SKU-HEY66P,Opus Exterior WeatherGuard 20L
+96,96,15.585517,78.476346,P,425045,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHLAQ665DLXZ.jpg,Invalid QR,https://qrs.opus.example/CASHLAQ665DLXZ,SKU-N2S8NN,Opus Exterior WeatherGuard 20L
+97,97,20.307223,77.51424,A,425045,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHWEEHWJQ4TA.jpg,Invalid QR,https://qrs.opus.example/CASHWEEHWJQ4TA,SKU-OCVITW,Opus Putty 30kg
+98,98,20.100396,86.629596,A,425045,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHK7BPGYVYV2.jpg,Invalid QR,https://qrs.opus.example/CASHK7BPGYVYV2,SKU-DKNNCP,Opus Putty 30kg
+99,99,13.426895,79.502854,A,425045,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHWD0W9RY79K.jpg,Scan successful,https://qrs.opus.example/CASHWD0W9RY79K,SKU-W7WR0R,Opus Exterior WeatherGuard 20L
+100,100,22.333968,74.827232,P,425045,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHBM3HXYJCKT.jpg,Expired,https://qrs.opus.example/CASHBM3HXYJCKT,SKU-0WBGLM,Opus Gloss Enamel 1L
+101,101,22.899583,81.417405,A,346739,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOY6TBB6BNDOZ.jpg,Expired,https://qrs.opus.example/LOY6TBB6BNDOZ,SKU-T91QE3,Opus Gloss Enamel 1L
+102,102,9.482311,74.042363,P,346739,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY25QBRMQG1V.jpg,Expired,https://qrs.opus.example/LOY25QBRMQG1V,SKU-QVIIFR,Opus Interior Emulsion 10L
+103,103,9.89214,84.340672,P,346739,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH4EVLDQLOVY.jpg,Invalid QR,https://qrs.opus.example/CASH4EVLDQLOVY,SKU-56WAFF,Opus Putty 30kg
+104,104,10.292695,73.644185,A,346739,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH9UWS44C68A.jpg,Invalid QR,https://qrs.opus.example/CASH9UWS44C68A,SKU-BPVWZO,Opus Gloss Enamel 1L
+105,105,20.632577,76.514083,A,346739,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHECAZRP9DXO.jpg,Invalid QR,https://qrs.opus.example/CASHECAZRP9DXO,SKU-GSTQMG,Opus Putty 30kg
+106,106,27.180184,80.748483,P,132305,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHNZRF5A7QY8.jpg,Expired,https://qrs.opus.example/CASHNZRF5A7QY8,SKU-8P74MJ,Opus Interior Emulsion 10L
+107,107,10.715062,81.127893,A,132305,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH3ADDQHKGAD.jpg,Expired,https://qrs.opus.example/CASH3ADDQHKGAD,SKU-6U86ZJ,Opus Gloss Enamel 1L
+108,108,8.728593,69.408247,P,132305,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHJ3GC9HOXDT.jpg,Already used,https://qrs.opus.example/CASHJ3GC9HOXDT,SKU-01ARXA,Opus Interior Emulsion 10L
+109,109,23.893469,73.799173,P,132305,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYTA83RU7MYO.jpg,Expired,https://qrs.opus.example/LOYTA83RU7MYO,SKU-HT8XKO,Opus Interior Emulsion 10L
+110,110,27.32865,68.737553,A,132305,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHR838AMMZOH.jpg,Already used,https://qrs.opus.example/CASHR838AMMZOH,SKU-FXQ7BZ,Opus Exterior WeatherGuard 20L
+111,111,12.179077,85.827303,P,296253,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH6ZVLHYL2LD.jpg,Expired,https://qrs.opus.example/CASH6ZVLHYL2LD,SKU-CVBPHV,Opus Exterior WeatherGuard 20L
+112,112,26.01996,72.328852,A,296253,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHKDQP1HKF28.jpg,Pending manual check,https://qrs.opus.example/CASHKDQP1HKF28,SKU-RQAP5I,Opus Gloss Enamel 1L
+113,113,8.33294,81.380712,P,296253,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH3ZDRC1YOHM.jpg,Expired,https://qrs.opus.example/CASH3ZDRC1YOHM,SKU-FQUV9Q,Opus Exterior WeatherGuard 20L
+114,114,8.854274,75.32866,A,296253,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHZWUHYWM7S6.jpg,Invalid QR,https://qrs.opus.example/CASHZWUHYWM7S6,SKU-XZU1EM,Opus Putty 30kg
+115,115,26.767068,73.767454,A,296253,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYMRSEZYTKW2.jpg,Pending manual check,https://qrs.opus.example/LOYMRSEZYTKW2,SKU-8DJZR5,Opus Putty 30kg
+116,116,13.949193,75.027101,P,358366,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY4Y89ORVSCY.jpg,Expired,https://qrs.opus.example/LOY4Y89ORVSCY,SKU-95D0P9,Opus Gloss Enamel 1L
+117,117,18.253239,84.455984,P,358366,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH1DO6OUZ1EG.jpg,Scan successful,https://qrs.opus.example/CASH1DO6OUZ1EG,SKU-KVR0I2,Opus Exterior WeatherGuard 20L
+118,118,20.156579,70.922742,A,358366,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHB1R8VNRPJY.jpg,Pending manual check,https://qrs.opus.example/CASHB1R8VNRPJY,SKU-QYMBNW,Opus Primer 5L
+119,119,10.140533,71.091098,A,358366,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHLL42JZNTMF.jpg,Scan successful,https://qrs.opus.example/CASHLL42JZNTMF,SKU-HG6W3S,Opus Putty 30kg
+120,120,12.385677,87.622191,A,358366,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH6V1MZB3I4F.jpg,Expired,https://qrs.opus.example/CASH6V1MZB3I4F,SKU-P1EARP,Opus Exterior WeatherGuard 20L
+121,121,15.997029,81.584087,A,371348,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOY89SFQERI7B.jpg,Expired,https://qrs.opus.example/LOY89SFQERI7B,SKU-FWDC11,Opus Gloss Enamel 1L
+122,122,22.108014,81.201572,P,371348,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHNLNQBU4KZR.jpg,Already used,https://qrs.opus.example/CASHNLNQBU4KZR,SKU-YUR4SO,Opus Gloss Enamel 1L
+123,123,19.252911,68.747552,P,371348,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOY1WNP9OCIIL.jpg,Already used,https://qrs.opus.example/LOY1WNP9OCIIL,SKU-XPSPAQ,Opus Interior Emulsion 10L
+124,124,9.979933,74.736761,P,371348,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHFK8HW9C4HJ.jpg,Invalid QR,https://qrs.opus.example/CASHFK8HW9C4HJ,SKU-C2RH2X,Opus Primer 5L
+125,125,13.023816,82.92867,P,371348,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYUH80Q7TW1P.jpg,Already used,https://qrs.opus.example/LOYUH80Q7TW1P,SKU-14O46W,Opus Gloss Enamel 1L
+126,126,10.098267,71.206867,A,689135,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYH66W51OB53.jpg,Invalid QR,https://qrs.opus.example/LOYH66W51OB53,SKU-JCP0TL,Opus Interior Emulsion 10L
+127,127,25.279464,83.990573,A,689135,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHZ1XEVO7Q5E.jpg,Scan successful,https://qrs.opus.example/CASHZ1XEVO7Q5E,SKU-HOG585,Opus Exterior WeatherGuard 20L
+128,128,25.897459,80.001656,P,689135,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY8EZP7QYEZG.jpg,Invalid QR,https://qrs.opus.example/LOY8EZP7QYEZG,SKU-9KYPOF,Opus Primer 5L
+129,129,14.322404,75.893936,P,689135,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYYZZ0JDCLI6.jpg,Already used,https://qrs.opus.example/LOYYZZ0JDCLI6,SKU-N8UUJS,Opus Primer 5L
+130,130,12.804085,68.717245,P,689135,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH7K5W1JL6L9.jpg,Scan successful,https://qrs.opus.example/CASH7K5W1JL6L9,SKU-JZP97B,Opus Primer 5L
+131,131,16.880693,69.889687,P,155568,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYDQC2K9YKIP.jpg,Expired,https://qrs.opus.example/LOYDQC2K9YKIP,SKU-XUJJCS,Opus Interior Emulsion 10L
+132,132,21.70624,77.20326,P,155568,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH85GG0V5DTA.jpg,Scan successful,https://qrs.opus.example/CASH85GG0V5DTA,SKU-OX00K3,Opus Putty 30kg
+133,133,17.306058,77.700937,A,155568,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHXPW2GKQRAF.jpg,Expired,https://qrs.opus.example/CASHXPW2GKQRAF,SKU-AQIK3O,Opus Primer 5L
+134,134,15.24737,81.950289,P,155568,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY0765ICAUTJ.jpg,Expired,https://qrs.opus.example/LOY0765ICAUTJ,SKU-AKGMIH,Opus Primer 5L
+135,135,25.304128,85.889149,P,155568,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYYEHVDO9KHB.jpg,Pending manual check,https://qrs.opus.example/LOYYEHVDO9KHB,SKU-BCPWEI,Opus Primer 5L
+136,136,19.532324,78.426717,P,377454,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYWWPM3X15DT.jpg,Scan successful,https://qrs.opus.example/LOYWWPM3X15DT,SKU-1FB2VI,Opus Primer 5L
+137,137,25.035156,79.455315,P,377454,200 OK,C,https://azure.blob.core.windows.net/coupons/LOYK0Q929U6WT.jpg,Expired,https://qrs.opus.example/LOYK0Q929U6WT,SKU-FN0DSG,Opus Primer 5L
+138,138,22.863047,70.587704,P,377454,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYYOU25VW9Y8.jpg,Scan successful,https://qrs.opus.example/LOYYOU25VW9Y8,SKU-Z5EHR0,Opus Putty 30kg
+139,139,19.44353,69.351291,A,377454,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHKR2FVB66H3.jpg,Expired,https://qrs.opus.example/CASHKR2FVB66H3,SKU-BRLQMN,Opus Putty 30kg
+140,140,23.834157,87.145856,P,377454,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHMBYPJDFAW1.jpg,Pending manual check,https://qrs.opus.example/CASHMBYPJDFAW1,SKU-S1SAXT,Opus Interior Emulsion 10L
+141,141,12.402039,87.179854,A,272638,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH095HS258W9.jpg,Expired,https://qrs.opus.example/CASH095HS258W9,SKU-L6E7VA,Opus Interior Emulsion 10L
+142,142,21.067444,84.16829,A,272638,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH3MG1ZAQ7QH.jpg,Expired,https://qrs.opus.example/CASH3MG1ZAQ7QH,SKU-H98BRZ,Opus Putty 30kg
+143,143,22.169755,87.839027,P,272638,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHYVGV0E7450.jpg,Already used,https://qrs.opus.example/CASHYVGV0E7450,SKU-YTJUQ7,Opus Interior Emulsion 10L
+144,144,14.880795,69.256882,A,272638,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHTLOM539IY8.jpg,Invalid QR,https://qrs.opus.example/CASHTLOM539IY8,SKU-WBPA27,Opus Primer 5L
+145,145,17.025435,70.036552,A,272638,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYW1WUDCBL4C.jpg,Expired,https://qrs.opus.example/LOYW1WUDCBL4C,SKU-CB4OWO,Opus Putty 30kg
+146,146,24.918294,81.218174,A,805929,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHHGJD3EX5MH.jpg,Pending manual check,https://qrs.opus.example/CASHHGJD3EX5MH,SKU-79955C,Opus Exterior WeatherGuard 20L
+147,147,23.702338,80.901431,P,805929,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOY4KFIWKESVR.jpg,Pending manual check,https://qrs.opus.example/LOY4KFIWKESVR,SKU-SRQLNZ,Opus Gloss Enamel 1L
+148,148,24.814143,74.340409,A,805929,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHF4JD1KSIBS.jpg,Scan successful,https://qrs.opus.example/CASHF4JD1KSIBS,SKU-NGIXMC,Opus Putty 30kg
+149,149,25.186255,83.662565,P,805929,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH014GVE4ZTJ.jpg,Invalid QR,https://qrs.opus.example/CASH014GVE4ZTJ,SKU-OOUXQS,Opus Exterior WeatherGuard 20L
+150,150,23.943389,81.810372,P,805929,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYHQUNUE7A34.jpg,Expired,https://qrs.opus.example/LOYHQUNUE7A34,SKU-KVUBF9,Opus Primer 5L
+151,151,14.836607,82.973521,A,804228,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHQJSQCZ0N04.jpg,Pending manual check,https://qrs.opus.example/CASHQJSQCZ0N04,SKU-RCTI8F,Opus Primer 5L
+152,152,16.163924,74.166485,A,804228,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHFMHBYHZ43X.jpg,Expired,https://qrs.opus.example/CASHFMHBYHZ43X,SKU-BA117N,Opus Exterior WeatherGuard 20L
+153,153,15.452445,71.472431,P,804228,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH0BS3LWW7OP.jpg,Invalid QR,https://qrs.opus.example/CASH0BS3LWW7OP,SKU-OLOQC3,Opus Putty 30kg
+154,154,17.382252,78.220523,P,804228,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYV9ZY9YLW5L.jpg,Invalid QR,https://qrs.opus.example/LOYV9ZY9YLW5L,SKU-0SZAA1,Opus Interior Emulsion 10L
+155,155,15.163024,72.116349,P,804228,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHI09P5EL2B2.jpg,Scan successful,https://qrs.opus.example/CASHI09P5EL2B2,SKU-B792ZI,Opus Gloss Enamel 1L
+156,156,16.602628,85.528009,P,428167,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOY1X7OV6SGP3.jpg,Invalid QR,https://qrs.opus.example/LOY1X7OV6SGP3,SKU-0DW1MF,Opus Exterior WeatherGuard 20L
+157,157,26.148766,71.322523,A,428167,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYGERSDUHH03.jpg,Scan successful,https://qrs.opus.example/LOYGERSDUHH03,SKU-KNJMVR,Opus Interior Emulsion 10L
+158,158,17.549613,81.966165,P,428167,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH7RMPN6937X.jpg,Pending manual check,https://qrs.opus.example/CASH7RMPN6937X,SKU-05EV5K,Opus Exterior WeatherGuard 20L
+159,159,10.992074,78.401089,P,428167,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY80YIR02M77.jpg,Scan successful,https://qrs.opus.example/LOY80YIR02M77,SKU-U4SE2K,Opus Putty 30kg
+160,160,14.955543,72.476124,P,428167,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOY9B7LNKZX8Y.jpg,Already used,https://qrs.opus.example/LOY9B7LNKZX8Y,SKU-U7CM60,Opus Gloss Enamel 1L
+161,161,28.487784,81.001956,P,365370,500 Error,C,https://azure.blob.core.windows.net/coupons/CASH0A0UY9F8P4.jpg,Expired,https://qrs.opus.example/CASH0A0UY9F8P4,SKU-V8WOBI,Opus Gloss Enamel 1L
+162,162,14.235794,70.504729,P,365370,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHAEEX6IV9RY.jpg,Invalid QR,https://qrs.opus.example/CASHAEEX6IV9RY,SKU-LZ5TOZ,Opus Gloss Enamel 1L
+163,163,27.775885,78.388861,A,365370,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHEEHFU4B9SN.jpg,Invalid QR,https://qrs.opus.example/CASHEEHFU4B9SN,SKU-2XQUZS,Opus Primer 5L
+164,164,23.312905,87.907185,A,365370,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHPTJXFQ8Y7F.jpg,Expired,https://qrs.opus.example/CASHPTJXFQ8Y7F,SKU-ZGNX3V,Opus Gloss Enamel 1L
+165,165,24.359133,70.47007,P,365370,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHOLD62F2JD9.jpg,Pending manual check,https://qrs.opus.example/CASHOLD62F2JD9,SKU-S5V3DM,Opus Putty 30kg
+166,166,14.866733,75.077855,A,538399,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYJAWO778S67.jpg,Expired,https://qrs.opus.example/LOYJAWO778S67,SKU-A6GMDR,Opus Interior Emulsion 10L
+167,167,8.841357,75.89092,A,538399,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHTJ9XPF0A5Z.jpg,Pending manual check,https://qrs.opus.example/CASHTJ9XPF0A5Z,SKU-06FHRX,Opus Primer 5L
+168,168,9.726651,76.579039,P,538399,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYE82EMAYB3P.jpg,Scan successful,https://qrs.opus.example/LOYE82EMAYB3P,SKU-W0GKEJ,Opus Exterior WeatherGuard 20L
+169,169,16.925822,69.03311,A,538399,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHB97PWDBOLW.jpg,Already used,https://qrs.opus.example/CASHB97PWDBOLW,SKU-DN7ZI6,Opus Exterior WeatherGuard 20L
+170,170,21.59019,72.200666,A,538399,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHMEYY1EM30V.jpg,Scan successful,https://qrs.opus.example/CASHMEYY1EM30V,SKU-N5E0EV,Opus Exterior WeatherGuard 20L
+171,171,11.867086,85.247043,P,657185,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHT3HJU31FI0.jpg,Scan successful,https://qrs.opus.example/CASHT3HJU31FI0,SKU-GR0XAF,Opus Exterior WeatherGuard 20L
+172,172,24.561169,68.187923,P,657185,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHVNA31XBIDF.jpg,Already used,https://qrs.opus.example/CASHVNA31XBIDF,SKU-2T34DF,Opus Putty 30kg
+173,173,10.126288,87.116981,A,657185,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYDKS4F6APFX.jpg,Pending manual check,https://qrs.opus.example/LOYDKS4F6APFX,SKU-MWE776,Opus Putty 30kg
+174,174,24.417913,77.56864,P,657185,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYJRNJ622592.jpg,Expired,https://qrs.opus.example/LOYJRNJ622592,SKU-CU8KD9,Opus Exterior WeatherGuard 20L
+175,175,8.358532,79.167489,P,657185,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYTTRTIDZS13.jpg,Pending manual check,https://qrs.opus.example/LOYTTRTIDZS13,SKU-87CM45,Opus Exterior WeatherGuard 20L
+176,176,25.807366,73.802388,A,189422,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYSLOMEYL6SS.jpg,Expired,https://qrs.opus.example/LOYSLOMEYL6SS,SKU-FQ5DZ5,Opus Exterior WeatherGuard 20L
+177,177,18.427266,77.096157,P,189422,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHHVCFWR2F5T.jpg,Expired,https://qrs.opus.example/CASHHVCFWR2F5T,SKU-GKCUMC,Opus Gloss Enamel 1L
+178,178,8.166008,85.061196,P,189422,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHOWYPSWLDOQ.jpg,Pending manual check,https://qrs.opus.example/CASHOWYPSWLDOQ,SKU-KFOCNQ,Opus Interior Emulsion 10L
+179,179,24.501786,87.571216,A,189422,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYCMVH0EQT8F.jpg,Already used,https://qrs.opus.example/LOYCMVH0EQT8F,SKU-HHA1PJ,Opus Exterior WeatherGuard 20L
+180,180,24.366213,79.942573,A,189422,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYD6M1FMPRYF.jpg,Invalid QR,https://qrs.opus.example/LOYD6M1FMPRYF,SKU-CYWL97,Opus Primer 5L
+181,181,26.897182,78.345542,A,533962,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH9I9GX32UEW.jpg,Scan successful,https://qrs.opus.example/CASH9I9GX32UEW,SKU-PD2SW2,Opus Primer 5L
+182,182,24.868336,75.562139,A,533962,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHN0EQWMI6KT.jpg,Scan successful,https://qrs.opus.example/CASHN0EQWMI6KT,SKU-JBCFA9,Opus Interior Emulsion 10L
+183,183,8.211932,71.573541,A,533962,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHD2ORWHP6WQ.jpg,Scan successful,https://qrs.opus.example/CASHD2ORWHP6WQ,SKU-UVB99R,Opus Putty 30kg
+184,184,18.362256,78.253131,A,533962,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHBEDYEJHDZX.jpg,Invalid QR,https://qrs.opus.example/CASHBEDYEJHDZX,SKU-OGGY5K,Opus Gloss Enamel 1L
+185,185,16.564993,80.077642,A,533962,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH3WVPUNWCGB.jpg,Scan successful,https://qrs.opus.example/CASH3WVPUNWCGB,SKU-58TOE3,Opus Gloss Enamel 1L
+186,186,12.719858,73.276241,A,330818,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHELFV46WYSI.jpg,Scan successful,https://qrs.opus.example/CASHELFV46WYSI,SKU-KCU5X0,Opus Exterior WeatherGuard 20L
+187,187,26.138249,78.269281,A,330818,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH31SL7ZX4DE.jpg,Scan successful,https://qrs.opus.example/CASH31SL7ZX4DE,SKU-2GKFL5,Opus Interior Emulsion 10L
+188,188,27.395617,71.878633,A,330818,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHJ7DPFSSBJD.jpg,Scan successful,https://qrs.opus.example/CASHJ7DPFSSBJD,SKU-GGJVSD,Opus Interior Emulsion 10L
+189,189,20.46295,82.677645,A,330818,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH5ZOOH3YRGH.jpg,Invalid QR,https://qrs.opus.example/CASH5ZOOH3YRGH,SKU-DSZRK6,Opus Exterior WeatherGuard 20L
+190,190,28.699634,84.707181,P,330818,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH5G1AMRA5RB.jpg,Expired,https://qrs.opus.example/CASH5G1AMRA5RB,SKU-SGFDK0,Opus Gloss Enamel 1L
+191,191,13.225427,76.326246,A,435234,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHP8DJKLUYLU.jpg,Already used,https://qrs.opus.example/CASHP8DJKLUYLU,SKU-HKK7QG,Opus Gloss Enamel 1L
+192,192,8.124414,84.149621,A,435234,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHQ6A1DF62UN.jpg,Already used,https://qrs.opus.example/CASHQ6A1DF62UN,SKU-5QBB3X,Opus Primer 5L
+193,193,20.619225,70.420688,P,435234,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHE6XFWZ73WH.jpg,Invalid QR,https://qrs.opus.example/CASHE6XFWZ73WH,SKU-DHR3PC,Opus Interior Emulsion 10L
+194,194,21.954923,75.823784,P,435234,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHWG3XG0TRKY.jpg,Scan successful,https://qrs.opus.example/CASHWG3XG0TRKY,SKU-ZDPPBQ,Opus Putty 30kg
+195,195,21.761478,86.469539,P,435234,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHJ9M4SMZOCX.jpg,Pending manual check,https://qrs.opus.example/CASHJ9M4SMZOCX,SKU-C4R8VG,Opus Putty 30kg
+196,196,10.911132,78.941747,A,492348,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHOCZDQ7JBMJ.jpg,Expired,https://qrs.opus.example/CASHOCZDQ7JBMJ,SKU-07X5IC,Opus Putty 30kg
+197,197,15.884061,70.504748,A,492348,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHSXPK48AB13.jpg,Scan successful,https://qrs.opus.example/CASHSXPK48AB13,SKU-ZTEEW6,Opus Primer 5L
+198,198,21.722737,69.527557,P,492348,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH3CEGBMXIKV.jpg,Invalid QR,https://qrs.opus.example/CASH3CEGBMXIKV,SKU-7HZ364,Opus Gloss Enamel 1L
+199,199,25.479197,73.405971,P,492348,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHRC64SKTE02.jpg,Scan successful,https://qrs.opus.example/CASHRC64SKTE02,SKU-VK8C4N,Opus Interior Emulsion 10L
+200,200,23.240826,82.70829,P,492348,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH61M3J1HA0W.jpg,Invalid QR,https://qrs.opus.example/CASH61M3J1HA0W,SKU-CDNZY4,Opus Putty 30kg
+201,201,28.035266,87.846388,A,177012,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHZ02Z7NUXF1.jpg,Pending manual check,https://qrs.opus.example/CASHZ02Z7NUXF1,SKU-U9W0TE,Opus Putty 30kg
+202,202,19.899253,84.535678,P,177012,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHIL9YQ8OCUC.jpg,Scan successful,https://qrs.opus.example/CASHIL9YQ8OCUC,SKU-ET1OVE,Opus Primer 5L
+203,203,11.488955,69.460294,P,177012,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH65AEJT70EB.jpg,Already used,https://qrs.opus.example/CASH65AEJT70EB,SKU-STNPEZ,Opus Exterior WeatherGuard 20L
+204,204,18.631144,79.761618,P,177012,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH0P1Z00V3SF.jpg,Expired,https://qrs.opus.example/CASH0P1Z00V3SF,SKU-8DKMU6,Opus Putty 30kg
+205,205,19.540216,78.173963,A,177012,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYUWDKEJP5K7.jpg,Already used,https://qrs.opus.example/LOYUWDKEJP5K7,SKU-GVB6TH,Opus Gloss Enamel 1L
+206,206,21.297963,68.912571,P,353978,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYJH4OULYO3P.jpg,Scan successful,https://qrs.opus.example/LOYJH4OULYO3P,SKU-QH5T2D,Opus Putty 30kg
+207,207,18.134409,71.13891,P,353978,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYHFT4I26LH0.jpg,Scan successful,https://qrs.opus.example/LOYHFT4I26LH0,SKU-KI1IJE,Opus Gloss Enamel 1L
+208,208,15.870537,76.590691,A,353978,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH2GVLLSAJHJ.jpg,Already used,https://qrs.opus.example/CASH2GVLLSAJHJ,SKU-IOKKZS,Opus Gloss Enamel 1L
+209,209,13.267298,74.229099,P,353978,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHDLFWDUH7VD.jpg,Already used,https://qrs.opus.example/CASHDLFWDUH7VD,SKU-MFLUOA,Opus Exterior WeatherGuard 20L
+210,210,10.457491,87.914886,A,353978,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHZN1F0FP8BP.jpg,Pending manual check,https://qrs.opus.example/CASHZN1F0FP8BP,SKU-Z5JL6U,Opus Exterior WeatherGuard 20L
+211,211,15.99336,71.580112,P,684049,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHUR2YUPMANQ.jpg,Pending manual check,https://qrs.opus.example/CASHUR2YUPMANQ,SKU-0APSAL,Opus Interior Emulsion 10L
+212,212,11.201708,82.723923,P,684049,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY83579WRR51.jpg,Invalid QR,https://qrs.opus.example/LOY83579WRR51,SKU-5EP4CW,Opus Interior Emulsion 10L
+213,213,12.152483,78.109317,P,684049,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHZNAXOYCG1F.jpg,Pending manual check,https://qrs.opus.example/CASHZNAXOYCG1F,SKU-G04AJM,Opus Primer 5L
+214,214,11.720284,70.808521,P,684049,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY12HNC0I4X6.jpg,Already used,https://qrs.opus.example/LOY12HNC0I4X6,SKU-LIG5GK,Opus Gloss Enamel 1L
+215,215,13.45168,86.438388,A,684049,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHU9PXYKM8T0.jpg,Already used,https://qrs.opus.example/CASHU9PXYKM8T0,SKU-SWRQLU,Opus Putty 30kg
+216,216,22.113204,77.613041,P,215194,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY3V16XEGHPM.jpg,Scan successful,https://qrs.opus.example/LOY3V16XEGHPM,SKU-J8GOSD,Opus Interior Emulsion 10L
+217,217,11.737747,76.481302,A,215194,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHKJWV2QNRMT.jpg,Expired,https://qrs.opus.example/CASHKJWV2QNRMT,SKU-15CA8Z,Opus Primer 5L
+218,218,10.334181,82.638086,P,215194,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHYJMK3TGMAL.jpg,Expired,https://qrs.opus.example/CASHYJMK3TGMAL,SKU-TOGTEF,Opus Gloss Enamel 1L
+219,219,24.587176,79.417902,P,215194,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHF9W5N9C70P.jpg,Already used,https://qrs.opus.example/CASHF9W5N9C70P,SKU-9WT2YB,Opus Putty 30kg
+220,220,22.881502,84.5395,P,215194,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHJOAOEJV9LH.jpg,Invalid QR,https://qrs.opus.example/CASHJOAOEJV9LH,SKU-VWLO7A,Opus Primer 5L
+221,221,14.923318,86.403116,P,356154,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYQZHECBUQYP.jpg,Expired,https://qrs.opus.example/LOYQZHECBUQYP,SKU-FQ8ABY,Opus Putty 30kg
+222,222,25.247278,83.071557,P,356154,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY3C330BO7WP.jpg,Scan successful,https://qrs.opus.example/LOY3C330BO7WP,SKU-EGOM62,Opus Exterior WeatherGuard 20L
+223,223,17.933453,76.797247,A,356154,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYLQJJBFSA5U.jpg,Invalid QR,https://qrs.opus.example/LOYLQJJBFSA5U,SKU-K0ZFKN,Opus Exterior WeatherGuard 20L
+224,224,12.688079,73.566311,A,356154,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHXVSSN7X5RR.jpg,Scan successful,https://qrs.opus.example/CASHXVSSN7X5RR,SKU-22XMQ6,Opus Interior Emulsion 10L
+225,225,23.531008,82.666745,P,356154,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOY8CUIJ0YXIY.jpg,Pending manual check,https://qrs.opus.example/LOY8CUIJ0YXIY,SKU-76EKHI,Opus Putty 30kg
+226,226,9.555522,71.208359,P,279665,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH91AZHZKNL2.jpg,Pending manual check,https://qrs.opus.example/CASH91AZHZKNL2,SKU-07V882,Opus Gloss Enamel 1L
+227,227,23.942252,73.214383,P,279665,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH7DE0L1OFFK.jpg,Invalid QR,https://qrs.opus.example/CASH7DE0L1OFFK,SKU-TKA1C2,Opus Primer 5L
+228,228,21.258413,82.688676,P,279665,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYFXP323C9NU.jpg,Scan successful,https://qrs.opus.example/LOYFXP323C9NU,SKU-U92T24,Opus Interior Emulsion 10L
+229,229,25.88151,79.68753,A,279665,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHXMSY3PAUA3.jpg,Invalid QR,https://qrs.opus.example/CASHXMSY3PAUA3,SKU-1TXH37,Opus Putty 30kg
+230,230,23.548396,82.798255,A,279665,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY57XHF9I71A.jpg,Invalid QR,https://qrs.opus.example/LOY57XHF9I71A,SKU-NQOHN3,Opus Interior Emulsion 10L
+231,231,13.220377,73.013414,A,454534,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHNWZR04HHE7.jpg,Already used,https://qrs.opus.example/CASHNWZR04HHE7,SKU-0KZQVS,Opus Primer 5L
+232,232,19.40888,70.356383,P,454534,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHFB2FLURMW3.jpg,Pending manual check,https://qrs.opus.example/CASHFB2FLURMW3,SKU-K17M6J,Opus Gloss Enamel 1L
+233,233,12.636813,68.334385,P,454534,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY93EZEMQT78.jpg,Pending manual check,https://qrs.opus.example/LOY93EZEMQT78,SKU-0MVF4S,Opus Putty 30kg
+234,234,10.844905,86.762867,A,454534,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHT8PHB8OOSP.jpg,Invalid QR,https://qrs.opus.example/CASHT8PHB8OOSP,SKU-AJUL7W,Opus Interior Emulsion 10L
+235,235,18.880964,78.484819,P,454534,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYG4C8J6E07F.jpg,Already used,https://qrs.opus.example/LOYG4C8J6E07F,SKU-1VIP3T,Opus Putty 30kg
+236,236,15.327413,84.11795,P,797695,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHW04I3DZXLR.jpg,Expired,https://qrs.opus.example/CASHW04I3DZXLR,SKU-618LEU,Opus Putty 30kg
+237,237,19.452933,81.350427,A,797695,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHZTO7D835KU.jpg,Invalid QR,https://qrs.opus.example/CASHZTO7D835KU,SKU-JR39II,Opus Exterior WeatherGuard 20L
+238,238,15.46285,87.161822,P,797695,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHUW590Z92JN.jpg,Scan successful,https://qrs.opus.example/CASHUW590Z92JN,SKU-E49ITE,Opus Putty 30kg
+239,239,13.267052,85.930579,P,797695,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHWRP8GUUCM5.jpg,Already used,https://qrs.opus.example/CASHWRP8GUUCM5,SKU-AVP1EO,Opus Gloss Enamel 1L
+240,240,25.466954,68.589751,P,797695,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHB1V1CCOFH9.jpg,Invalid QR,https://qrs.opus.example/CASHB1V1CCOFH9,SKU-70LDOZ,Opus Gloss Enamel 1L
+241,241,26.815776,78.855741,A,237133,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHRRLRNR2KYB.jpg,Pending manual check,https://qrs.opus.example/CASHRRLRNR2KYB,SKU-X0TBKG,Opus Putty 30kg
+242,242,15.770281,84.755746,P,237133,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYZCHHXA7HY7.jpg,Expired,https://qrs.opus.example/LOYZCHHXA7HY7,SKU-BFIY5P,Opus Putty 30kg
+243,243,25.880119,73.229984,A,237133,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHB1EYCEF2CT.jpg,Expired,https://qrs.opus.example/CASHB1EYCEF2CT,SKU-1O5HD4,Opus Exterior WeatherGuard 20L
+244,244,27.266451,75.002344,A,237133,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYIWPFVB71GH.jpg,Scan successful,https://qrs.opus.example/LOYIWPFVB71GH,SKU-HXOFKC,Opus Exterior WeatherGuard 20L
+245,245,16.09932,79.339096,P,237133,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYCYOTWG7NFD.jpg,Expired,https://qrs.opus.example/LOYCYOTWG7NFD,SKU-41BTA3,Opus Gloss Enamel 1L
+246,246,10.475406,86.20463,A,364608,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH4N6V3RZKDU.jpg,Scan successful,https://qrs.opus.example/CASH4N6V3RZKDU,SKU-OUWZK4,Opus Exterior WeatherGuard 20L
+247,247,21.04225,81.547463,A,364608,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH7VG688U595.jpg,Scan successful,https://qrs.opus.example/CASH7VG688U595,SKU-7D78HW,Opus Primer 5L
+248,248,14.326649,71.992848,P,364608,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHBILQPB01QC.jpg,Invalid QR,https://qrs.opus.example/CASHBILQPB01QC,SKU-QNZJNN,Opus Putty 30kg
+249,249,9.576101,82.462142,P,364608,200 OK,C,https://azure.blob.core.windows.net/coupons/LOY7DXLSE33DC.jpg,Scan successful,https://qrs.opus.example/LOY7DXLSE33DC,SKU-0M6CU8,Opus Gloss Enamel 1L
+250,250,11.675284,71.95441,P,364608,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHBCLTRH9VGK.jpg,Expired,https://qrs.opus.example/CASHBCLTRH9VGK,SKU-FT9ZZC,Opus Exterior WeatherGuard 20L
+251,251,24.868898,85.281951,A,538963,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYSRHR8WMLWW.jpg,Already used,https://qrs.opus.example/LOYSRHR8WMLWW,SKU-N8CQPH,Opus Primer 5L
+252,252,13.559553,76.989698,A,538963,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHZV3IU6L5NF.jpg,Already used,https://qrs.opus.example/CASHZV3IU6L5NF,SKU-12JF4C,Opus Exterior WeatherGuard 20L
+253,253,11.010846,68.505674,A,538963,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHH3G7VKC5SS.jpg,Already used,https://qrs.opus.example/CASHH3G7VKC5SS,SKU-X1CQ6F,Opus Gloss Enamel 1L
+254,254,20.813415,83.21063,P,538963,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH8E5TNLZTWX.jpg,Invalid QR,https://qrs.opus.example/CASH8E5TNLZTWX,SKU-XL1BS0,Opus Exterior WeatherGuard 20L
+255,255,10.408707,86.228488,P,538963,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHCMCOCO2ZTD.jpg,Invalid QR,https://qrs.opus.example/CASHCMCOCO2ZTD,SKU-JIXUB4,Opus Exterior WeatherGuard 20L
+256,256,10.353063,82.496181,A,441388,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOY80NKXKBEFQ.jpg,Expired,https://qrs.opus.example/LOY80NKXKBEFQ,SKU-Q5ZJAU,Opus Interior Emulsion 10L
+257,257,25.911263,79.178888,P,441388,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHX85ZZHJY8G.jpg,Already used,https://qrs.opus.example/CASHX85ZZHJY8G,SKU-Z2Z0KD,Opus Primer 5L
+258,258,17.751003,83.074066,P,441388,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHGOQMK31RTM.jpg,Pending manual check,https://qrs.opus.example/CASHGOQMK31RTM,SKU-5FBS4W,Opus Putty 30kg
+259,259,23.295763,83.93826,A,441388,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH9TSUJT70Y2.jpg,Invalid QR,https://qrs.opus.example/CASH9TSUJT70Y2,SKU-TOXOU0,Opus Interior Emulsion 10L
+260,260,27.747879,81.231701,A,441388,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH1KHW8GAKH3.jpg,Expired,https://qrs.opus.example/CASH1KHW8GAKH3,SKU-AVMNKW,Opus Gloss Enamel 1L
+261,261,11.877163,76.265115,A,481741,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYRSI7EADGHX.jpg,Pending manual check,https://qrs.opus.example/LOYRSI7EADGHX,SKU-UIFEZA,Opus Interior Emulsion 10L
+262,262,21.103066,76.270172,P,481741,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHXRHGTW4CY4.jpg,Already used,https://qrs.opus.example/CASHXRHGTW4CY4,SKU-W73O1B,Opus Primer 5L
+263,263,17.708198,84.136228,P,481741,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOY5X1FVK1PBC.jpg,Expired,https://qrs.opus.example/LOY5X1FVK1PBC,SKU-7KTLL8,Opus Putty 30kg
+264,264,10.910903,83.398181,A,481741,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYVI7LIG9GMY.jpg,Invalid QR,https://qrs.opus.example/LOYVI7LIG9GMY,SKU-KYNTL2,Opus Putty 30kg
+265,265,17.504496,87.817075,A,481741,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH7QMJCENTOC.jpg,Expired,https://qrs.opus.example/CASH7QMJCENTOC,SKU-VJUHBP,Opus Gloss Enamel 1L
+266,266,13.327948,72.571137,A,837103,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY58YUXCZAUM.jpg,Already used,https://qrs.opus.example/LOY58YUXCZAUM,SKU-N9RG4X,Opus Putty 30kg
+267,267,26.220831,80.418893,P,837103,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHBC7QK4K6IL.jpg,Scan successful,https://qrs.opus.example/CASHBC7QK4K6IL,SKU-U2550K,Opus Gloss Enamel 1L
+268,268,8.433005,78.090195,P,837103,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHT2TNGTG2LG.jpg,Expired,https://qrs.opus.example/CASHT2TNGTG2LG,SKU-CEBFE5,Opus Primer 5L
+269,269,25.50642,76.103972,P,837103,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHQ2YOTOS87M.jpg,Pending manual check,https://qrs.opus.example/CASHQ2YOTOS87M,SKU-J7G4EB,Opus Interior Emulsion 10L
+270,270,17.722778,85.647669,P,837103,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYH11QV1F2OF.jpg,Expired,https://qrs.opus.example/LOYH11QV1F2OF,SKU-QOB867,Opus Primer 5L
+271,271,22.575278,78.116873,P,606272,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHRLSR0O8K5D.jpg,Expired,https://qrs.opus.example/CASHRLSR0O8K5D,SKU-OOUKIW,Opus Interior Emulsion 10L
+272,272,26.738549,86.687485,P,606272,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYVO4KVFFLNC.jpg,Scan successful,https://qrs.opus.example/LOYVO4KVFFLNC,SKU-2ZFBQB,Opus Primer 5L
+273,273,13.433628,80.869281,P,606272,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH263RJK4CWE.jpg,Pending manual check,https://qrs.opus.example/CASH263RJK4CWE,SKU-ZDVYB4,Opus Exterior WeatherGuard 20L
+274,274,27.434351,81.365387,A,606272,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYFFCVEDQFC1.jpg,Already used,https://qrs.opus.example/LOYFFCVEDQFC1,SKU-Y0KZ6X,Opus Primer 5L
+275,275,18.176089,87.767377,P,606272,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHEL8PL6UZA2.jpg,Already used,https://qrs.opus.example/CASHEL8PL6UZA2,SKU-F5IV86,Opus Exterior WeatherGuard 20L
+276,276,13.816482,69.665362,A,707103,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH4AI2278EQE.jpg,Invalid QR,https://qrs.opus.example/CASH4AI2278EQE,SKU-2MNG80,Opus Putty 30kg
+277,277,12.161463,68.839293,A,707103,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYDS3HGW10C9.jpg,Scan successful,https://qrs.opus.example/LOYDS3HGW10C9,SKU-QAM97X,Opus Gloss Enamel 1L
+278,278,9.147682,74.004102,A,707103,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHTT1E32WITP.jpg,Scan successful,https://qrs.opus.example/CASHTT1E32WITP,SKU-8EJNFM,Opus Gloss Enamel 1L
+279,279,25.586664,79.004168,P,707103,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYZ57V4NDJM5.jpg,Scan successful,https://qrs.opus.example/LOYZ57V4NDJM5,SKU-T43TUY,Opus Primer 5L
+280,280,27.18961,82.013949,A,707103,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYC8VDRQNTJV.jpg,Pending manual check,https://qrs.opus.example/LOYC8VDRQNTJV,SKU-D3Q0E0,Opus Putty 30kg
+281,281,26.01585,78.329611,A,464053,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYH6AIRH8S7D.jpg,Expired,https://qrs.opus.example/LOYH6AIRH8S7D,SKU-LOC8D6,Opus Primer 5L
+282,282,26.606373,74.494301,A,464053,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHG0ZPZJHO4V.jpg,Pending manual check,https://qrs.opus.example/CASHG0ZPZJHO4V,SKU-4M1TRP,Opus Putty 30kg
+283,283,15.123019,72.73419,P,464053,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHZHHNBAVEKV.jpg,Scan successful,https://qrs.opus.example/CASHZHHNBAVEKV,SKU-E22TW1,Opus Interior Emulsion 10L
+284,284,12.895189,68.904083,A,464053,200 OK,C,https://azure.blob.core.windows.net/coupons/LOYIUAZ71UF09.jpg,Invalid QR,https://qrs.opus.example/LOYIUAZ71UF09,SKU-G3HKCQ,Opus Putty 30kg
+285,285,22.916796,85.676573,A,464053,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYRANTY6D1HF.jpg,Expired,https://qrs.opus.example/LOYRANTY6D1HF,SKU-T6V8VL,Opus Gloss Enamel 1L
+286,286,9.853591,82.477985,A,297417,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYG1S2LQSQBB.jpg,Scan successful,https://qrs.opus.example/LOYG1S2LQSQBB,SKU-JFNEO2,Opus Putty 30kg
+287,287,8.98202,70.448209,A,297417,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYOIVWQM9128.jpg,Expired,https://qrs.opus.example/LOYOIVWQM9128,SKU-O4EUTA,Opus Primer 5L
+288,288,8.432826,85.588922,A,297417,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHJFCZWKGUY0.jpg,Expired,https://qrs.opus.example/CASHJFCZWKGUY0,SKU-1E04PD,Opus Primer 5L
+289,289,20.032327,84.294439,A,297417,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYOIYMYK86AD.jpg,Invalid QR,https://qrs.opus.example/LOYOIYMYK86AD,SKU-S710NU,Opus Putty 30kg
+290,290,9.976615,79.997104,A,297417,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY9KHH83GSV5.jpg,Invalid QR,https://qrs.opus.example/LOY9KHH83GSV5,SKU-SZ2TVH,Opus Putty 30kg
+291,291,14.695905,82.903226,A,184014,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOY2ABG9SHO5D.jpg,Expired,https://qrs.opus.example/LOY2ABG9SHO5D,SKU-DGH6M3,Opus Putty 30kg
+292,292,15.822924,82.477147,A,184014,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH0BI6ATQGKR.jpg,Pending manual check,https://qrs.opus.example/CASH0BI6ATQGKR,SKU-BYQYVB,Opus Primer 5L
+293,293,26.583264,73.91095,P,184014,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH1UN2KTVV0Y.jpg,Pending manual check,https://qrs.opus.example/CASH1UN2KTVV0Y,SKU-TNN8IL,Opus Interior Emulsion 10L
+294,294,11.634816,72.318137,A,184014,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHKF8OU7OZ9R.jpg,Pending manual check,https://qrs.opus.example/CASHKF8OU7OZ9R,SKU-U9IVLX,Opus Primer 5L
+295,295,13.560206,83.672017,P,184014,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH96UPB22O1T.jpg,Invalid QR,https://qrs.opus.example/CASH96UPB22O1T,SKU-NNOC3A,Opus Gloss Enamel 1L
+296,296,8.009707,70.252401,P,146708,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHH6OQ7QH96Y.jpg,Invalid QR,https://qrs.opus.example/CASHH6OQ7QH96Y,SKU-1ISYER,Opus Putty 30kg
+297,297,25.388809,75.967192,A,146708,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH5LFOS9DJ9I.jpg,Scan successful,https://qrs.opus.example/CASH5LFOS9DJ9I,SKU-T760RS,Opus Exterior WeatherGuard 20L
+298,298,12.784183,83.005425,P,146708,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOY0R0VIP35T5.jpg,Expired,https://qrs.opus.example/LOY0R0VIP35T5,SKU-8A2VZP,Opus Interior Emulsion 10L
+299,299,16.463135,71.00681,P,146708,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYFXGIMYDO5N.jpg,Pending manual check,https://qrs.opus.example/LOYFXGIMYDO5N,SKU-CX7CUL,Opus Gloss Enamel 1L
+300,300,26.444065,74.754419,P,146708,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH8E7428YI4P.jpg,Scan successful,https://qrs.opus.example/CASH8E7428YI4P,SKU-0SWXKQ,Opus Putty 30kg
+301,301,13.493551,75.725582,A,165340,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHMVYD47DZNA.jpg,Already used,https://qrs.opus.example/CASHMVYD47DZNA,SKU-4LV11K,Opus Primer 5L
+302,302,11.626352,80.387591,P,165340,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHH3MI2DNODK.jpg,Pending manual check,https://qrs.opus.example/CASHH3MI2DNODK,SKU-HP08D2,Opus Gloss Enamel 1L
+303,303,25.654276,78.535662,P,165340,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY1GNT9ZSUV4.jpg,Pending manual check,https://qrs.opus.example/LOY1GNT9ZSUV4,SKU-4MFEL3,Opus Gloss Enamel 1L
+304,304,28.223559,84.248358,P,165340,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHRMM0YTMV82.jpg,Scan successful,https://qrs.opus.example/CASHRMM0YTMV82,SKU-PLE45B,Opus Primer 5L
+305,305,28.797599,77.812588,P,165340,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHRSWP0YKKSW.jpg,Scan successful,https://qrs.opus.example/CASHRSWP0YKKSW,SKU-R49HQW,Opus Gloss Enamel 1L
+306,306,16.21541,72.942706,A,287923,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASH6LN824TL7J.jpg,Scan successful,https://qrs.opus.example/CASH6LN824TL7J,SKU-AL5U8R,Opus Interior Emulsion 10L
+307,307,8.586838,81.504413,A,287923,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHQSRER6LUU6.jpg,Already used,https://qrs.opus.example/CASHQSRER6LUU6,SKU-8EN00B,Opus Exterior WeatherGuard 20L
+308,308,25.02666,85.103713,A,287923,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHYMIT72723B.jpg,Pending manual check,https://qrs.opus.example/CASHYMIT72723B,SKU-UDC4FH,Opus Putty 30kg
+309,309,21.235775,82.635109,A,287923,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHGWHAOQHVD8.jpg,Scan successful,https://qrs.opus.example/CASHGWHAOQHVD8,SKU-EF578O,Opus Exterior WeatherGuard 20L
+310,310,15.947927,72.168038,P,287923,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHQ0X717HW0B.jpg,Scan successful,https://qrs.opus.example/CASHQ0X717HW0B,SKU-AGXXKS,Opus Exterior WeatherGuard 20L
+311,311,10.097883,75.972767,P,376279,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHQABCE2EH30.jpg,Pending manual check,https://qrs.opus.example/CASHQABCE2EH30,SKU-1DFSTS,Opus Primer 5L
+312,312,12.169436,76.012343,P,376279,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHBQIQICB5NT.jpg,Pending manual check,https://qrs.opus.example/CASHBQIQICB5NT,SKU-EHAPM4,Opus Primer 5L
+313,313,28.478297,76.059687,P,376279,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYVF37746PFM.jpg,Expired,https://qrs.opus.example/LOYVF37746PFM,SKU-PLLV12,Opus Interior Emulsion 10L
+314,314,13.340403,80.176984,P,376279,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHCZ14WJAI9C.jpg,Invalid QR,https://qrs.opus.example/CASHCZ14WJAI9C,SKU-BVXVR6,Opus Putty 30kg
+315,315,22.870076,86.221417,P,376279,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY8FR8RUI31P.jpg,Scan successful,https://qrs.opus.example/LOY8FR8RUI31P,SKU-FP9XAQ,Opus Putty 30kg
+316,316,16.019971,72.973098,A,139059,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYULND7U4XXG.jpg,Scan successful,https://qrs.opus.example/LOYULND7U4XXG,SKU-JWAQLC,Opus Interior Emulsion 10L
+317,317,19.018674,80.038849,A,139059,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYTA882JOZIB.jpg,Invalid QR,https://qrs.opus.example/LOYTA882JOZIB,SKU-CA3DC9,Opus Interior Emulsion 10L
+318,318,16.96438,81.005715,P,139059,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHBJUDL3AF6K.jpg,Already used,https://qrs.opus.example/CASHBJUDL3AF6K,SKU-5ZJ2O4,Opus Gloss Enamel 1L
+319,319,20.903799,86.302761,P,139059,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH3FJPO4DILG.jpg,Already used,https://qrs.opus.example/CASH3FJPO4DILG,SKU-ZUZTLS,Opus Putty 30kg
+320,320,23.731562,79.104788,P,139059,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHYCYRNZNZMC.jpg,Pending manual check,https://qrs.opus.example/CASHYCYRNZNZMC,SKU-OPI9XD,Opus Putty 30kg
+321,321,27.218005,69.069424,P,708589,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHU5M767JEZ2.jpg,Expired,https://qrs.opus.example/CASHU5M767JEZ2,SKU-TI1RIM,Opus Putty 30kg
+322,322,26.18029,84.910199,P,708589,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHZILJ29JB8J.jpg,Expired,https://qrs.opus.example/CASHZILJ29JB8J,SKU-CFG79K,Opus Putty 30kg
+323,323,14.875082,80.706833,P,708589,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYGG3TY36MAT.jpg,Already used,https://qrs.opus.example/LOYGG3TY36MAT,SKU-BV2IZS,Opus Exterior WeatherGuard 20L
+324,324,16.934697,84.517037,A,708589,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHZORK64MGJ7.jpg,Invalid QR,https://qrs.opus.example/CASHZORK64MGJ7,SKU-HTNCVH,Opus Putty 30kg
+325,325,17.392756,70.750606,P,708589,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH2UPVSF5YC9.jpg,Invalid QR,https://qrs.opus.example/CASH2UPVSF5YC9,SKU-NBD0V0,Opus Gloss Enamel 1L
+326,326,24.155817,83.204176,P,321926,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH9AQLO36JWB.jpg,Pending manual check,https://qrs.opus.example/CASH9AQLO36JWB,SKU-PTKFTU,Opus Putty 30kg
+327,327,12.948024,68.445539,A,321926,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYETYX2CB2PN.jpg,Already used,https://qrs.opus.example/LOYETYX2CB2PN,SKU-DPZ9Q8,Opus Putty 30kg
+328,328,22.065162,84.695714,A,321926,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHS8ERKD0RNG.jpg,Already used,https://qrs.opus.example/CASHS8ERKD0RNG,SKU-TKVV7P,Opus Exterior WeatherGuard 20L
+329,329,22.845408,68.361236,P,321926,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH6DTYN4BPSA.jpg,Invalid QR,https://qrs.opus.example/CASH6DTYN4BPSA,SKU-0CO76O,Opus Interior Emulsion 10L
+330,330,27.679388,78.844899,A,321926,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY55KCRX6SFJ.jpg,Scan successful,https://qrs.opus.example/LOY55KCRX6SFJ,SKU-71AC27,Opus Interior Emulsion 10L
+331,331,19.799535,82.583731,A,596110,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHTLB37ZOQMC.jpg,Invalid QR,https://qrs.opus.example/CASHTLB37ZOQMC,SKU-AB76LB,Opus Primer 5L
+332,332,22.266088,87.964218,A,596110,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHZQOYGWOW7L.jpg,Expired,https://qrs.opus.example/CASHZQOYGWOW7L,SKU-6YG626,Opus Primer 5L
+333,333,10.698924,79.899209,A,596110,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH6M2YVP6MPB.jpg,Already used,https://qrs.opus.example/CASH6M2YVP6MPB,SKU-BM0YX6,Opus Interior Emulsion 10L
+334,334,28.060747,75.183483,A,596110,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHAM75PSZ1CT.jpg,Expired,https://qrs.opus.example/CASHAM75PSZ1CT,SKU-1INUFN,Opus Interior Emulsion 10L
+335,335,28.130465,75.499373,A,596110,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHCTZRBZIRJY.jpg,Already used,https://qrs.opus.example/CASHCTZRBZIRJY,SKU-IARN4F,Opus Primer 5L
+336,336,15.977943,78.335281,A,774828,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHUP1SHNTCVL.jpg,Pending manual check,https://qrs.opus.example/CASHUP1SHNTCVL,SKU-Z117R1,Opus Putty 30kg
+337,337,10.663931,86.532425,A,774828,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH8LBDSG1FBT.jpg,Scan successful,https://qrs.opus.example/CASH8LBDSG1FBT,SKU-9E8CDK,Opus Primer 5L
+338,338,26.778883,83.186081,P,774828,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYEW9JZF4EPM.jpg,Expired,https://qrs.opus.example/LOYEW9JZF4EPM,SKU-SP5OOA,Opus Interior Emulsion 10L
+339,339,28.176043,78.824245,P,774828,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYX9DY39CK5B.jpg,Pending manual check,https://qrs.opus.example/LOYX9DY39CK5B,SKU-JWOFC5,Opus Interior Emulsion 10L
+340,340,8.756115,87.306246,A,774828,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHNZ7DSONKK1.jpg,Invalid QR,https://qrs.opus.example/CASHNZ7DSONKK1,SKU-OHL1ZU,Opus Primer 5L
+341,341,17.335702,70.256833,A,225850,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYZAL4W7S3GO.jpg,Expired,https://qrs.opus.example/LOYZAL4W7S3GO,SKU-7A5JI1,Opus Putty 30kg
+342,342,26.886638,68.599753,A,225850,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASH73KLLZCUH1.jpg,Scan successful,https://qrs.opus.example/CASH73KLLZCUH1,SKU-X0RTMG,Opus Interior Emulsion 10L
+343,343,25.145436,72.451288,A,225850,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH2J4XYBRXFX.jpg,Scan successful,https://qrs.opus.example/CASH2J4XYBRXFX,SKU-QQUOLG,Opus Gloss Enamel 1L
+344,344,10.506225,68.529395,A,225850,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH7NXXBAF4GE.jpg,Scan successful,https://qrs.opus.example/CASH7NXXBAF4GE,SKU-K8YE71,Opus Putty 30kg
+345,345,22.272307,86.190892,A,225850,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH6AXUWRIENW.jpg,Already used,https://qrs.opus.example/CASH6AXUWRIENW,SKU-FFY3IW,Opus Putty 30kg
+346,346,13.786141,77.522878,P,394863,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYLAXHNOC2XI.jpg,Scan successful,https://qrs.opus.example/LOYLAXHNOC2XI,SKU-NJCGWC,Opus Interior Emulsion 10L
+347,347,9.486422,85.337544,P,394863,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHUN9VQR2C23.jpg,Expired,https://qrs.opus.example/CASHUN9VQR2C23,SKU-REXFCH,Opus Exterior WeatherGuard 20L
+348,348,21.321711,72.160097,P,394863,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHRRCV1EXYB8.jpg,Scan successful,https://qrs.opus.example/CASHRRCV1EXYB8,SKU-WU6YHV,Opus Gloss Enamel 1L
+349,349,28.234744,77.285344,P,394863,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHFVMAM3JKX2.jpg,Invalid QR,https://qrs.opus.example/CASHFVMAM3JKX2,SKU-LT1RKQ,Opus Gloss Enamel 1L
+350,350,15.94528,74.421924,A,394863,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYOMZQB09UW8.jpg,Invalid QR,https://qrs.opus.example/LOYOMZQB09UW8,SKU-BNQAND,Opus Putty 30kg
+351,351,20.738214,86.887637,A,400472,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHD2H5LOMZOL.jpg,Scan successful,https://qrs.opus.example/CASHD2H5LOMZOL,SKU-JMKJLN,Opus Interior Emulsion 10L
+352,352,16.281522,84.431088,P,400472,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHLKJHDKXZO0.jpg,Invalid QR,https://qrs.opus.example/CASHLKJHDKXZO0,SKU-3B29XZ,Opus Exterior WeatherGuard 20L
+353,353,15.038579,85.442813,A,400472,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHK4CI248F3V.jpg,Already used,https://qrs.opus.example/CASHK4CI248F3V,SKU-7FHSF2,Opus Interior Emulsion 10L
+354,354,13.810075,75.403902,A,400472,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYQCYYPQ7A4F.jpg,Invalid QR,https://qrs.opus.example/LOYQCYYPQ7A4F,SKU-C7GIU1,Opus Gloss Enamel 1L
+355,355,25.382468,77.525741,P,400472,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYDZ8XEBNP5O.jpg,Already used,https://qrs.opus.example/LOYDZ8XEBNP5O,SKU-WR3OW3,Opus Exterior WeatherGuard 20L
+356,356,21.039804,86.075475,P,277608,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASH2ANY1YC1L2.jpg,Expired,https://qrs.opus.example/CASH2ANY1YC1L2,SKU-OWH8VL,Opus Exterior WeatherGuard 20L
+357,357,20.360519,74.316093,A,277608,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYCOTFVAN0FV.jpg,Invalid QR,https://qrs.opus.example/LOYCOTFVAN0FV,SKU-XUIIY3,Opus Gloss Enamel 1L
+358,358,25.115471,69.674159,P,277608,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHMH0IT4BU4I.jpg,Expired,https://qrs.opus.example/CASHMH0IT4BU4I,SKU-4D32NK,Opus Interior Emulsion 10L
+359,359,18.884322,83.518768,P,277608,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHUCLLE4A2G7.jpg,Already used,https://qrs.opus.example/CASHUCLLE4A2G7,SKU-8WK501,Opus Interior Emulsion 10L
+360,360,11.206567,83.207028,A,277608,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHGLCKWT2E07.jpg,Scan successful,https://qrs.opus.example/CASHGLCKWT2E07,SKU-VVWUSX,Opus Putty 30kg
+361,361,15.313819,77.949571,P,726176,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHDXJ1WQQOQS.jpg,Pending manual check,https://qrs.opus.example/CASHDXJ1WQQOQS,SKU-0AZ0ZN,Opus Gloss Enamel 1L
+362,362,16.841773,87.769255,P,726176,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHYWAPKE5AJR.jpg,Already used,https://qrs.opus.example/CASHYWAPKE5AJR,SKU-K1UOAA,Opus Putty 30kg
+363,363,8.206415,80.09856,A,726176,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH4EQKQ7MOU3.jpg,Expired,https://qrs.opus.example/CASH4EQKQ7MOU3,SKU-XSOA8E,Opus Interior Emulsion 10L
+364,364,12.952489,79.900088,A,726176,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHMDHUTT52LK.jpg,Already used,https://qrs.opus.example/CASHMDHUTT52LK,SKU-R40DM9,Opus Exterior WeatherGuard 20L
+365,365,17.159946,78.827246,A,726176,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHD52MH68NDJ.jpg,Invalid QR,https://qrs.opus.example/CASHD52MH68NDJ,SKU-49PUSR,Opus Interior Emulsion 10L
+366,366,21.3077,75.265456,P,550822,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHYG4F4DESRW.jpg,Expired,https://qrs.opus.example/CASHYG4F4DESRW,SKU-VJQJIN,Opus Exterior WeatherGuard 20L
+367,367,18.892362,80.017508,A,550822,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHQJ4VBISBHT.jpg,Expired,https://qrs.opus.example/CASHQJ4VBISBHT,SKU-G7SS63,Opus Putty 30kg
+368,368,14.114031,85.387131,A,550822,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHEYO3HLI32B.jpg,Invalid QR,https://qrs.opus.example/CASHEYO3HLI32B,SKU-R0PNF3,Opus Putty 30kg
+369,369,20.424025,81.271422,P,550822,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYBVVBBBVMIA.jpg,Pending manual check,https://qrs.opus.example/LOYBVVBBBVMIA,SKU-KKXO0S,Opus Putty 30kg
+370,370,21.361323,86.146078,P,550822,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY1ESEVGC0QT.jpg,Invalid QR,https://qrs.opus.example/LOY1ESEVGC0QT,SKU-QCALUK,Opus Primer 5L
+371,371,13.143476,87.130376,A,330064,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHQIX43IRGM5.jpg,Expired,https://qrs.opus.example/CASHQIX43IRGM5,SKU-WX46QG,Opus Interior Emulsion 10L
+372,372,11.948206,79.20433,A,330064,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOYC6WZ8L6M5W.jpg,Already used,https://qrs.opus.example/LOYC6WZ8L6M5W,SKU-ARHJRH,Opus Exterior WeatherGuard 20L
+373,373,23.99395,85.423375,A,330064,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYO2POZ4XV87.jpg,Expired,https://qrs.opus.example/LOYO2POZ4XV87,SKU-1M4I3L,Opus Gloss Enamel 1L
+374,374,15.506114,78.239386,A,330064,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY4311BKHSSC.jpg,Pending manual check,https://qrs.opus.example/LOY4311BKHSSC,SKU-0HKRAJ,Opus Exterior WeatherGuard 20L
+375,375,15.442479,77.236506,A,330064,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHOM287C45ID.jpg,Invalid QR,https://qrs.opus.example/CASHOM287C45ID,SKU-A1CCYY,Opus Primer 5L
+376,376,9.124286,87.567415,A,657793,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYL71029DG38.jpg,Invalid QR,https://qrs.opus.example/LOYL71029DG38,SKU-31K26G,Opus Exterior WeatherGuard 20L
+377,377,20.595968,74.002159,P,657793,200 OK,M,https://azure.blob.core.windows.net/coupons/LOY0Q45NAYPWL.jpg,Scan successful,https://qrs.opus.example/LOY0Q45NAYPWL,SKU-U8YJMY,Opus Putty 30kg
+378,378,10.652246,77.272179,P,657793,500 Error,C,https://azure.blob.core.windows.net/coupons/CASH59Z025JU26.jpg,Pending manual check,https://qrs.opus.example/CASH59Z025JU26,SKU-96SJQA,Opus Exterior WeatherGuard 20L
+379,379,28.474631,73.57205,P,657793,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHO01717HV0E.jpg,Expired,https://qrs.opus.example/CASHO01717HV0E,SKU-JPQ8SE,Opus Putty 30kg
+380,380,17.476834,79.874874,A,657793,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH5ML51AATN2.jpg,Scan successful,https://qrs.opus.example/CASH5ML51AATN2,SKU-WAS1UD,Opus Primer 5L
+381,381,9.979256,83.431791,P,692306,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHQ2M8OF7MQA.jpg,Already used,https://qrs.opus.example/CASHQ2M8OF7MQA,SKU-8TLTY7,Opus Exterior WeatherGuard 20L
+382,382,10.614453,81.097279,P,692306,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHHJOBEIFDD5.jpg,Scan successful,https://qrs.opus.example/CASHHJOBEIFDD5,SKU-JTNRP1,Opus Exterior WeatherGuard 20L
+383,383,19.176443,71.263638,A,692306,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYDDINZ298L4.jpg,Expired,https://qrs.opus.example/LOYDDINZ298L4,SKU-LDY3YG,Opus Gloss Enamel 1L
+384,384,9.255871,72.15387,A,692306,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHJC755OTS42.jpg,Already used,https://qrs.opus.example/CASHJC755OTS42,SKU-AO73KU,Opus Primer 5L
+385,385,24.018072,70.021507,P,692306,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY8FMW4V1FJ2.jpg,Invalid QR,https://qrs.opus.example/LOY8FMW4V1FJ2,SKU-ZRHTTQ,Opus Interior Emulsion 10L
+386,386,11.23174,85.875146,A,225347,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHEQ1ZQ8DAYD.jpg,Invalid QR,https://qrs.opus.example/CASHEQ1ZQ8DAYD,SKU-Y5V9JR,Opus Interior Emulsion 10L
+387,387,12.457704,75.905227,P,225347,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHYZNM5SAXYK.jpg,Expired,https://qrs.opus.example/CASHYZNM5SAXYK,SKU-G8EV2N,Opus Gloss Enamel 1L
+388,388,12.547539,75.279574,A,225347,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHU97Z77DBEO.jpg,Pending manual check,https://qrs.opus.example/CASHU97Z77DBEO,SKU-98X16F,Opus Exterior WeatherGuard 20L
+389,389,28.673481,81.965718,A,225347,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHV33LIFNCRN.jpg,Already used,https://qrs.opus.example/CASHV33LIFNCRN,SKU-O2I5WL,Opus Primer 5L
+390,390,24.870062,70.679728,P,225347,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH24ERTL15E1.jpg,Expired,https://qrs.opus.example/CASH24ERTL15E1,SKU-V1RDNF,Opus Interior Emulsion 10L
+391,391,9.608766,82.089274,A,159188,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHPJAGXLQ0S5.jpg,Invalid QR,https://qrs.opus.example/CASHPJAGXLQ0S5,SKU-A3SFGH,Opus Gloss Enamel 1L
+392,392,14.039057,84.742994,A,159188,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH43XRV8DF2F.jpg,Invalid QR,https://qrs.opus.example/CASH43XRV8DF2F,SKU-OTBGDP,Opus Putty 30kg
+393,393,26.540264,68.786753,A,159188,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHRCPACQ5AH9.jpg,Expired,https://qrs.opus.example/CASHRCPACQ5AH9,SKU-MABUHO,Opus Gloss Enamel 1L
+394,394,28.718305,77.865126,P,159188,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHBO7JFM03TD.jpg,Scan successful,https://qrs.opus.example/CASHBO7JFM03TD,SKU-TD6ENM,Opus Interior Emulsion 10L
+395,395,8.058295,82.963674,A,159188,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHXMHRWWNQA4.jpg,Invalid QR,https://qrs.opus.example/CASHXMHRWWNQA4,SKU-914ABA,Opus Interior Emulsion 10L
+396,396,8.552799,79.421638,A,747315,200 OK,C,https://azure.blob.core.windows.net/coupons/LOY4JLYS7JD6Z.jpg,Already used,https://qrs.opus.example/LOY4JLYS7JD6Z,SKU-F0TJ5J,Opus Exterior WeatherGuard 20L
+397,397,28.28863,78.034368,A,747315,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHDXKXB4RVWJ.jpg,Pending manual check,https://qrs.opus.example/CASHDXKXB4RVWJ,SKU-I3WYZT,Opus Interior Emulsion 10L
+398,398,21.303682,83.712203,P,747315,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY51V9PD57FQ.jpg,Invalid QR,https://qrs.opus.example/LOY51V9PD57FQ,SKU-MSG0G1,Opus Gloss Enamel 1L
+399,399,23.779124,78.665673,A,747315,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHN75WLN2OTG.jpg,Invalid QR,https://qrs.opus.example/CASHN75WLN2OTG,SKU-M27O19,Opus Gloss Enamel 1L
+400,400,25.538098,87.257461,A,747315,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHDUGAAZPGYB.jpg,Pending manual check,https://qrs.opus.example/CASHDUGAAZPGYB,SKU-NGC4XA,Opus Exterior WeatherGuard 20L
+401,401,16.736652,79.356399,A,799859,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHJPMH3UQ1AM.jpg,Invalid QR,https://qrs.opus.example/CASHJPMH3UQ1AM,SKU-KQHPZC,Opus Interior Emulsion 10L
+402,402,27.984268,78.451006,P,799859,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHLVA2UHTJPK.jpg,Expired,https://qrs.opus.example/CASHLVA2UHTJPK,SKU-JQONTQ,Opus Primer 5L
+403,403,14.991499,81.950086,A,799859,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHS30U7FRZUD.jpg,Invalid QR,https://qrs.opus.example/CASHS30U7FRZUD,SKU-X4NKIO,Opus Gloss Enamel 1L
+404,404,18.618982,78.141334,P,799859,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHAOZ5E7GGO4.jpg,Invalid QR,https://qrs.opus.example/CASHAOZ5E7GGO4,SKU-LSLV3N,Opus Exterior WeatherGuard 20L
+405,405,8.621557,75.815083,P,799859,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH44WUFEQJ4P.jpg,Pending manual check,https://qrs.opus.example/CASH44WUFEQJ4P,SKU-GCC1U8,Opus Interior Emulsion 10L
+406,406,11.139653,71.312088,A,442401,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHOKQBBWBX54.jpg,Invalid QR,https://qrs.opus.example/CASHOKQBBWBX54,SKU-8TX134,Opus Primer 5L
+407,407,10.7895,68.334862,P,442401,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHDPA7YZ5ND2.jpg,Already used,https://qrs.opus.example/CASHDPA7YZ5ND2,SKU-WQW29P,Opus Primer 5L
+408,408,13.19666,71.652792,P,442401,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH6CA037FF5H.jpg,Already used,https://qrs.opus.example/CASH6CA037FF5H,SKU-6UO3ZI,Opus Gloss Enamel 1L
+409,409,26.333085,78.200416,P,442401,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHJ1Z322KAIO.jpg,Invalid QR,https://qrs.opus.example/CASHJ1Z322KAIO,SKU-FMZQRS,Opus Primer 5L
+410,410,11.856445,87.22492,P,442401,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHEUUR656EBJ.jpg,Already used,https://qrs.opus.example/CASHEUUR656EBJ,SKU-UENO88,Opus Putty 30kg
+411,411,18.256728,70.41032,A,475047,200 OK,C,https://azure.blob.core.windows.net/coupons/LOYQODSU9F16X.jpg,Expired,https://qrs.opus.example/LOYQODSU9F16X,SKU-FICGXL,Opus Gloss Enamel 1L
+412,412,11.842433,73.878464,A,475047,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOY1GBZ30V0VS.jpg,Invalid QR,https://qrs.opus.example/LOY1GBZ30V0VS,SKU-9JQTAJ,Opus Gloss Enamel 1L
+413,413,15.254668,73.359691,P,475047,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHCQB7U2MRIX.jpg,Scan successful,https://qrs.opus.example/CASHCQB7U2MRIX,SKU-N8B3UM,Opus Interior Emulsion 10L
+414,414,28.784235,72.972891,P,475047,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYX7BRRBAI3A.jpg,Scan successful,https://qrs.opus.example/LOYX7BRRBAI3A,SKU-7ZFCTY,Opus Putty 30kg
+415,415,12.947657,82.416659,A,475047,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHTAOFZD6KPV.jpg,Scan successful,https://qrs.opus.example/CASHTAOFZD6KPV,SKU-EBG9K4,Opus Putty 30kg
+416,416,10.471752,71.298176,A,639038,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHB05DWJATE4.jpg,Pending manual check,https://qrs.opus.example/CASHB05DWJATE4,SKU-2IBNAJ,Opus Exterior WeatherGuard 20L
+417,417,8.916355,73.7166,A,639038,500 Error,C,https://azure.blob.core.windows.net/coupons/LOY8BWTB5Q787.jpg,Pending manual check,https://qrs.opus.example/LOY8BWTB5Q787,SKU-UVY7ID,Opus Putty 30kg
+418,418,24.946975,84.807129,P,639038,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH1OO5VYFRRL.jpg,Invalid QR,https://qrs.opus.example/CASH1OO5VYFRRL,SKU-LPQK5F,Opus Gloss Enamel 1L
+419,419,9.568614,72.905899,A,639038,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYYCI08P3LBS.jpg,Expired,https://qrs.opus.example/LOYYCI08P3LBS,SKU-LPJZ80,Opus Primer 5L
+420,420,15.821936,77.374148,P,639038,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHO874OHL5TH.jpg,Scan successful,https://qrs.opus.example/CASHO874OHL5TH,SKU-189Y42,Opus Interior Emulsion 10L
+421,421,21.382546,83.821708,P,165363,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYB2AUBNBWGS.jpg,Expired,https://qrs.opus.example/LOYB2AUBNBWGS,SKU-KB6JY5,Opus Gloss Enamel 1L
+422,422,18.151155,79.723959,P,165363,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYIO2XM43O8J.jpg,Already used,https://qrs.opus.example/LOYIO2XM43O8J,SKU-D79ZUR,Opus Putty 30kg
+423,423,20.241628,86.691207,A,165363,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHV2H31PHEIV.jpg,Scan successful,https://qrs.opus.example/CASHV2H31PHEIV,SKU-TXX6LK,Opus Primer 5L
+424,424,19.412157,77.661577,A,165363,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHK37FOQSR41.jpg,Expired,https://qrs.opus.example/CASHK37FOQSR41,SKU-LT4CSN,Opus Interior Emulsion 10L
+425,425,25.543684,69.187079,P,165363,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYSYWU2GYIAW.jpg,Already used,https://qrs.opus.example/LOYSYWU2GYIAW,SKU-5PNEDL,Opus Primer 5L
+426,426,20.895117,73.405297,A,741432,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOY1R99ALX8UY.jpg,Pending manual check,https://qrs.opus.example/LOY1R99ALX8UY,SKU-X3BID6,Opus Putty 30kg
+427,427,23.082162,72.029332,P,741432,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHXQTQV8ELSP.jpg,Invalid QR,https://qrs.opus.example/CASHXQTQV8ELSP,SKU-S1EV2S,Opus Gloss Enamel 1L
+428,428,16.024536,71.635866,A,741432,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH0NWKQ4KSD9.jpg,Already used,https://qrs.opus.example/CASH0NWKQ4KSD9,SKU-VXXYN9,Opus Putty 30kg
+429,429,12.765179,81.586193,P,741432,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH477IQFXEW8.jpg,Expired,https://qrs.opus.example/CASH477IQFXEW8,SKU-UB31P3,Opus Putty 30kg
+430,430,15.724512,87.751324,P,741432,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYS95TWBQHSM.jpg,Pending manual check,https://qrs.opus.example/LOYS95TWBQHSM,SKU-1WG3HJ,Opus Putty 30kg
+431,431,26.443835,72.642415,P,834162,200 OK,C,https://azure.blob.core.windows.net/coupons/LOY4HTPL131V0.jpg,Expired,https://qrs.opus.example/LOY4HTPL131V0,SKU-92WMSJ,Opus Gloss Enamel 1L
+432,432,24.177085,72.167546,A,834162,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASH1SHEURQ7VZ.jpg,Already used,https://qrs.opus.example/CASH1SHEURQ7VZ,SKU-BUDU7X,Opus Exterior WeatherGuard 20L
+433,433,23.528919,79.446038,A,834162,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHIPO86K24ZN.jpg,Expired,https://qrs.opus.example/CASHIPO86K24ZN,SKU-TX7R07,Opus Putty 30kg
+434,434,24.947001,73.756031,A,834162,200 OK,C,https://azure.blob.core.windows.net/coupons/CASH6D2KJRZCV3.jpg,Expired,https://qrs.opus.example/CASH6D2KJRZCV3,SKU-0E34TK,Opus Exterior WeatherGuard 20L
+435,435,10.80953,84.980593,P,834162,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH6OQE09O8A9.jpg,Expired,https://qrs.opus.example/CASH6OQE09O8A9,SKU-EY9JVB,Opus Exterior WeatherGuard 20L
+436,436,12.782755,77.627622,A,311439,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHPSBTNBDZRI.jpg,Pending manual check,https://qrs.opus.example/CASHPSBTNBDZRI,SKU-OW8A2C,Opus Gloss Enamel 1L
+437,437,12.080467,71.70039,A,311439,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYXA53XI3C7G.jpg,Scan successful,https://qrs.opus.example/LOYXA53XI3C7G,SKU-S59YMZ,Opus Primer 5L
+438,438,13.807595,68.630143,A,311439,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHJ0UA9O6H0F.jpg,Scan successful,https://qrs.opus.example/CASHJ0UA9O6H0F,SKU-L5VGGN,Opus Exterior WeatherGuard 20L
+439,439,14.965062,72.331567,P,311439,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHIGGN92F0J3.jpg,Expired,https://qrs.opus.example/CASHIGGN92F0J3,SKU-GO1KP2,Opus Exterior WeatherGuard 20L
+440,440,22.386679,87.945576,A,311439,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHW5IXTWGQIO.jpg,Pending manual check,https://qrs.opus.example/CASHW5IXTWGQIO,SKU-9O3UCR,Opus Gloss Enamel 1L
+441,441,25.986009,79.772623,A,110402,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYOLKFU3F4K1.jpg,Already used,https://qrs.opus.example/LOYOLKFU3F4K1,SKU-6AOUSX,Opus Interior Emulsion 10L
+442,442,12.068967,72.632476,A,110402,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHILVB8DM1AO.jpg,Pending manual check,https://qrs.opus.example/CASHILVB8DM1AO,SKU-8H7PR2,Opus Primer 5L
+443,443,26.788232,71.230992,A,110402,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHRHCJTDAKXV.jpg,Invalid QR,https://qrs.opus.example/CASHRHCJTDAKXV,SKU-6FU547,Opus Gloss Enamel 1L
+444,444,10.066635,82.037802,A,110402,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYHHPZUYR7VH.jpg,Expired,https://qrs.opus.example/LOYHHPZUYR7VH,SKU-DRHEZU,Opus Primer 5L
+445,445,20.648603,72.776842,A,110402,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHQWL67C7HP4.jpg,Invalid QR,https://qrs.opus.example/CASHQWL67C7HP4,SKU-2C7RWE,Opus Gloss Enamel 1L
+446,446,11.250883,71.852095,P,369473,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHGSEM2FITGU.jpg,Invalid QR,https://qrs.opus.example/CASHGSEM2FITGU,SKU-9VKAD0,Opus Putty 30kg
+447,447,23.866671,78.483817,P,369473,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOYG877FXV7A7.jpg,Scan successful,https://qrs.opus.example/LOYG877FXV7A7,SKU-B7AC6D,Opus Primer 5L
+448,448,28.232615,81.473772,P,369473,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHOQ0WTGXY7I.jpg,Expired,https://qrs.opus.example/CASHOQ0WTGXY7I,SKU-IU1YD3,Opus Putty 30kg
+449,449,24.740955,76.583016,P,369473,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASH2VL1TKU04V.jpg,Scan successful,https://qrs.opus.example/CASH2VL1TKU04V,SKU-N0NPIQ,Opus Primer 5L
+450,450,18.42695,86.187959,A,369473,404 Not Found,M,https://azure.blob.core.windows.net/coupons/LOY6CMWSH0WFW.jpg,Pending manual check,https://qrs.opus.example/LOY6CMWSH0WFW,SKU-L5AKG0,Opus Primer 5L
+451,451,18.745166,75.369324,A,121718,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHCAZXPNGMZY.jpg,Invalid QR,https://qrs.opus.example/CASHCAZXPNGMZY,SKU-8L0UW6,Opus Exterior WeatherGuard 20L
+452,452,22.004672,87.480699,A,121718,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHNPKIA0W8MY.jpg,Pending manual check,https://qrs.opus.example/CASHNPKIA0W8MY,SKU-PPPCGQ,Opus Gloss Enamel 1L
+453,453,13.142956,71.023372,P,121718,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHCECERT7AWR.jpg,Expired,https://qrs.opus.example/CASHCECERT7AWR,SKU-YEMF5N,Opus Putty 30kg
+454,454,13.42675,74.891592,P,121718,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH7I31I1UZ5Z.jpg,Pending manual check,https://qrs.opus.example/CASH7I31I1UZ5Z,SKU-XSNWER,Opus Putty 30kg
+455,455,26.325629,85.430091,P,121718,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHFD2YBNMZOG.jpg,Already used,https://qrs.opus.example/CASHFD2YBNMZOG,SKU-N2R9LM,Opus Exterior WeatherGuard 20L
+456,456,16.102894,73.062546,P,513654,200 OK,C,https://azure.blob.core.windows.net/coupons/CASHY423PACE2F.jpg,Pending manual check,https://qrs.opus.example/CASHY423PACE2F,SKU-8TH1PQ,Opus Putty 30kg
+457,457,26.123762,86.161935,P,513654,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/CASHVKP6EUNPU4.jpg,Expired,https://qrs.opus.example/CASHVKP6EUNPU4,SKU-7N385C,Opus Primer 5L
+458,458,25.423031,71.818644,A,513654,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOY80U10KWCCI.jpg,Pending manual check,https://qrs.opus.example/LOY80U10KWCCI,SKU-WDSHLL,Opus Putty 30kg
+459,459,15.645505,86.55686,P,513654,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH4QJD7B52XO.jpg,Invalid QR,https://qrs.opus.example/CASH4QJD7B52XO,SKU-P29EUQ,Opus Gloss Enamel 1L
+460,460,21.713192,83.409275,P,513654,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHHGMTVPPFNN.jpg,Scan successful,https://qrs.opus.example/CASHHGMTVPPFNN,SKU-SKNXD6,Opus Gloss Enamel 1L
+461,461,12.102182,77.177861,A,325015,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYKV0N4H2AWN.jpg,Already used,https://qrs.opus.example/LOYKV0N4H2AWN,SKU-HZEDCJ,Opus Putty 30kg
+462,462,20.495553,85.270341,A,325015,200 OK,M,https://azure.blob.core.windows.net/coupons/CASH6L0DCZ6PBB.jpg,Pending manual check,https://qrs.opus.example/CASH6L0DCZ6PBB,SKU-7HLSZM,Opus Interior Emulsion 10L
+463,463,18.835556,74.207559,P,325015,200 OK,C,https://azure.blob.core.windows.net/coupons/LOY79NK33AH78.jpg,Scan successful,https://qrs.opus.example/LOY79NK33AH78,SKU-TJ669R,Opus Exterior WeatherGuard 20L
+464,464,25.660829,86.191525,A,325015,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHXNADA1K3RE.jpg,Pending manual check,https://qrs.opus.example/CASHXNADA1K3RE,SKU-NZ3HA6,Opus Interior Emulsion 10L
+465,465,17.268764,76.493951,A,325015,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHX8M8CT71WB.jpg,Pending manual check,https://qrs.opus.example/CASHX8M8CT71WB,SKU-IPG6A2,Opus Interior Emulsion 10L
+466,466,18.09148,79.654247,A,299184,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHNA46N0ABCZ.jpg,Scan successful,https://qrs.opus.example/CASHNA46N0ABCZ,SKU-U8F855,Opus Primer 5L
+467,467,10.580966,82.621728,A,299184,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHAVJVWSQ4RX.jpg,Expired,https://qrs.opus.example/CASHAVJVWSQ4RX,SKU-FWCS4B,Opus Primer 5L
+468,468,10.90286,82.03498,P,299184,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHV3WAGB2RH7.jpg,Already used,https://qrs.opus.example/CASHV3WAGB2RH7,SKU-UNQ2W9,Opus Primer 5L
+469,469,13.594261,71.965983,A,299184,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOY62NK7HLCNP.jpg,Invalid QR,https://qrs.opus.example/LOY62NK7HLCNP,SKU-K0I7MT,Opus Gloss Enamel 1L
+470,470,28.833472,81.810176,A,299184,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYRSASVI1X1V.jpg,Pending manual check,https://qrs.opus.example/LOYRSASVI1X1V,SKU-5BA0L2,Opus Primer 5L
+471,471,26.172299,71.335724,P,400519,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYEG4OHPN9FD.jpg,Scan successful,https://qrs.opus.example/LOYEG4OHPN9FD,SKU-P5GPSS,Opus Putty 30kg
+472,472,24.800026,86.952857,P,400519,500 Error,M,https://azure.blob.core.windows.net/coupons/CASHI2IWMC07LB.jpg,Scan successful,https://qrs.opus.example/CASHI2IWMC07LB,SKU-8H23TU,Opus Interior Emulsion 10L
+473,473,20.340825,82.969739,P,400519,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHN4FG0DJQ1P.jpg,Scan successful,https://qrs.opus.example/CASHN4FG0DJQ1P,SKU-WGD4HK,Opus Gloss Enamel 1L
+474,474,22.322944,69.667625,P,400519,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHLOYEYQE683.jpg,Already used,https://qrs.opus.example/CASHLOYEYQE683,SKU-BSIWFV,Opus Exterior WeatherGuard 20L
+475,475,28.653209,68.117568,P,400519,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYUYRPK404C5.jpg,Invalid QR,https://qrs.opus.example/LOYUYRPK404C5,SKU-1N3IRW,Opus Exterior WeatherGuard 20L
+476,476,17.324477,81.687107,P,837123,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYJXN7PRWMOE.jpg,Invalid QR,https://qrs.opus.example/LOYJXN7PRWMOE,SKU-E1SOFP,Opus Putty 30kg
+477,477,16.17153,75.625265,P,837123,200 OK,M,https://azure.blob.core.windows.net/coupons/CASHRQH4S03B0H.jpg,Invalid QR,https://qrs.opus.example/CASHRQH4S03B0H,SKU-RHHKYC,Opus Gloss Enamel 1L
+478,478,18.166206,80.067028,A,837123,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHJAJLTUV67H.jpg,Invalid QR,https://qrs.opus.example/CASHJAJLTUV67H,SKU-XOI41U,Opus Exterior WeatherGuard 20L
+479,479,24.148944,86.920005,P,837123,500 Error,M,https://azure.blob.core.windows.net/coupons/LOYB0YUCQEFRS.jpg,Already used,https://qrs.opus.example/LOYB0YUCQEFRS,SKU-X4RYS0,Opus Putty 30kg
+480,480,22.310467,87.151376,P,837123,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHTOMPSDWX96.jpg,Expired,https://qrs.opus.example/CASHTOMPSDWX96,SKU-ZOI9HD,Opus Putty 30kg
+481,481,28.020803,68.922829,A,443503,500 Error,C,https://azure.blob.core.windows.net/coupons/CASHJILHBI62VS.jpg,Scan successful,https://qrs.opus.example/CASHJILHBI62VS,SKU-VZL5UQ,Opus Primer 5L
+482,482,21.508492,82.699506,P,443503,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYCH8Q7QRERI.jpg,Invalid QR,https://qrs.opus.example/LOYCH8Q7QRERI,SKU-8DW54I,Opus Interior Emulsion 10L
+483,483,10.46652,82.716772,A,443503,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/LOY1T4F9BYI4N.jpg,Already used,https://qrs.opus.example/LOY1T4F9BYI4N,SKU-PCM9A2,Opus Primer 5L
+484,484,12.172351,75.666617,P,443503,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHKLDWC6G4Y3.jpg,Expired,https://qrs.opus.example/CASHKLDWC6G4Y3,SKU-WGU9B8,Opus Exterior WeatherGuard 20L
+485,485,11.109842,68.044012,A,443503,404 Not Found,M,https://azure.blob.core.windows.net/coupons/CASHDJ4WT1VAWI.jpg,Invalid QR,https://qrs.opus.example/CASHDJ4WT1VAWI,SKU-PG0JG3,Opus Putty 30kg
+486,486,28.552699,79.509674,P,471979,422 Unprocessable,C,https://azure.blob.core.windows.net/coupons/LOYXC0PADRKU0.jpg,Expired,https://qrs.opus.example/LOYXC0PADRKU0,SKU-L59K1A,Opus Primer 5L
+487,487,16.941701,71.448593,P,471979,500 Error,C,https://azure.blob.core.windows.net/coupons/LOYQZV62E84L9.jpg,Expired,https://qrs.opus.example/LOYQZV62E84L9,SKU-N3S2W1,Opus Exterior WeatherGuard 20L
+488,488,15.8594,77.496963,P,471979,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH14FTNM8VH1.jpg,Pending manual check,https://qrs.opus.example/CASH14FTNM8VH1,SKU-6NOBGP,Opus Primer 5L
+489,489,22.111723,85.803844,P,471979,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/LOYHNYDZ0B545.jpg,Expired,https://qrs.opus.example/LOYHNYDZ0B545,SKU-N7QLBW,Opus Putty 30kg
+490,490,8.470822,85.331528,P,471979,404 Not Found,C,https://azure.blob.core.windows.net/coupons/LOYMG025582RQ.jpg,Scan successful,https://qrs.opus.example/LOYMG025582RQ,SKU-PMLQHD,Opus Primer 5L
+491,491,17.427305,72.87272,P,343700,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHYWP6CBC5TN.jpg,Scan successful,https://qrs.opus.example/CASHYWP6CBC5TN,SKU-T4J0SG,Opus Gloss Enamel 1L
+492,492,26.068626,77.58132,P,343700,500 Error,M,https://azure.blob.core.windows.net/coupons/CASH6ISX49T0Z4.jpg,Invalid QR,https://qrs.opus.example/CASH6ISX49T0Z4,SKU-DDHNSG,Opus Exterior WeatherGuard 20L
+493,493,25.545617,87.460026,A,343700,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/LOYYRVMWW3SZY.jpg,Pending manual check,https://qrs.opus.example/LOYYRVMWW3SZY,SKU-DQ1GT7,Opus Interior Emulsion 10L
+494,494,11.234017,86.092054,P,343700,404 Not Found,C,https://azure.blob.core.windows.net/coupons/CASHGEV3LFY5U0.jpg,Scan successful,https://qrs.opus.example/CASHGEV3LFY5U0,SKU-K9KOHD,Opus Primer 5L
+495,495,24.366486,82.839649,A,343700,200 OK,M,https://azure.blob.core.windows.net/coupons/LOYDZ6W5OWK1L.jpg,Already used,https://qrs.opus.example/LOYDZ6W5OWK1L,SKU-GVF74V,Opus Primer 5L
+496,496,18.285663,78.173182,A,631824,200 OK,C,https://azure.blob.core.windows.net/coupons/LOYJDS0SP8JB6.jpg,Expired,https://qrs.opus.example/LOYJDS0SP8JB6,SKU-S0NP99,Opus Putty 30kg
+497,497,23.882495,82.605526,P,631824,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASH25UAK3J16C.jpg,Pending manual check,https://qrs.opus.example/CASH25UAK3J16C,SKU-4S210U,Opus Putty 30kg
+498,498,26.068708,83.182784,A,631824,409 Duplicate,C,https://azure.blob.core.windows.net/coupons/CASHUV58OHCU0E.jpg,Invalid QR,https://qrs.opus.example/CASHUV58OHCU0E,SKU-OW0O2N,Opus Exterior WeatherGuard 20L
+499,499,18.024267,73.376016,A,631824,422 Unprocessable,M,https://azure.blob.core.windows.net/coupons/CASHB6SP0Y3ROR.jpg,Already used,https://qrs.opus.example/CASHB6SP0Y3ROR,SKU-KLUMCM,Opus Exterior WeatherGuard 20L
+500,500,23.637211,70.356326,A,631824,409 Duplicate,M,https://azure.blob.core.windows.net/coupons/CASHRTQJ8CW8N5.jpg,Already used,https://qrs.opus.example/CASHRTQJ8CW8N5,SKU-WRJIWM,Opus Primer 5L

@@ -16,7 +16,7 @@ def _get_data_file_path() -> str:
     return os.path.join(project_root, "data", "mock.csv")
 
 @function_tool()
-async def verify_phone_number(self, context: RunContext, phone_number: str) -> dict:
+async def verify_phone_number(context: RunContext, phone_number: str) -> dict:
     """Verify if phone number is registered and get associated accounts."""
     try:
         clean_phone = ''.join(filter(str.isdigit, phone_number))

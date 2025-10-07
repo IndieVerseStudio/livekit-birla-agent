@@ -47,7 +47,7 @@ def _find_customers(key: str, value: str) -> List[Dict[str, Any]]:
     return accounts
 
 @function_tool()
-async def customer_lookup_tool(self, context: RunContext, mobile_number: str) -> str:
+async def customer_lookup_tool(context: RunContext, mobile_number: str) -> str:
     """Looks up customer details using their 10-digit mobile number."""
     try:
         clean_phone = ''.join(filter(str.isdigit, mobile_number))
@@ -65,7 +65,7 @@ async def customer_lookup_tool(self, context: RunContext, mobile_number: str) ->
         return f"An error occurred during customer lookup: {str(e)}"
 
 @function_tool()
-async def customer_lookup_by_opus_id_tool(self, context: RunContext, opus_id: str) -> str:
+async def customer_lookup_by_opus_id_tool(context: RunContext, opus_id: str) -> str:
     """Looks up customer details using their Opus ID."""
     try:
         if not opus_id:

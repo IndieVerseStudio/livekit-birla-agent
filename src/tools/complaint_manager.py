@@ -44,14 +44,14 @@ def _save_complaints(complaints: List[Dict]) -> None:
         json.dump(complaints, file, indent=2, ensure_ascii=False)
 
 @function_tool()
-async def auto_create_complaint_tool(self, context: RunContext, opus_id: str, customer_name: str, days_since_kyc: int) -> dict:
+async def auto_create_complaint_tool(context: RunContext, opus_id: str, customer_name: str, days_since_kyc: int) -> dict:
     """Automatically create a complaint if customer has been waiting more than 30 days since KYC completion."""
     try:
         # If more than 30 days, automatically create a complaint
         if days_since_kyc > 30:
             kyc_completion_date = (datetime.now() - timedelta(days=days_since_kyc)).strftime("%Y-%m-%d")
             
-            complaint_result = await self.create_complaint_tool(
+            complaint_result = await create_complaint_tool(
                 context=context,
                 opus_id=opus_id,
                 customer_name=customer_name,
@@ -95,7 +95,7 @@ async def auto_create_complaint_tool(self, context: RunContext, opus_id: str, cu
         }
 
 @function_tool()
-async def create_complaint_tool(self, context: RunContext, opus_id: str, customer_name: str, complaint_type: str, 
+async def create_complaint_tool(context: RunContext, opus_id: str, customer_name: str, complaint_type: str, 
                 subject: str, issue_description: str, priority: str) -> dict:
     """Create a new complaint."""
     try:
@@ -146,7 +146,7 @@ async def create_complaint_tool(self, context: RunContext, opus_id: str, custome
         }
 
 @function_tool()
-async def create_enquiry_tool(self, context: RunContext, opus_id: str, customer_name: str, enquiry_type: str, 
+async def create_enquiry_tool(context: RunContext, opus_id: str, customer_name: str, enquiry_type: str, 
                 subject: str, description: str) -> dict:
     """Create a new enquiry (for informational purposes)."""
     try:

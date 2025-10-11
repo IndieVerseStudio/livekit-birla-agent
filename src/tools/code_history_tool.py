@@ -9,6 +9,7 @@ import csv
 import os
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
+from livekit.agents import function_tool, RunContext
 
 
 def _get_data_file_path() -> str:
@@ -516,3 +517,21 @@ def query_code_history(
 # Export the main function for LiveKit use
 # The agent.py will wrap this with @function_tool() decorator
 query_code_history_func = query_code_history
+
+@function_tool()
+async def code_history_tool(context: RunContext, 
+                            opus_pc_id: str = None,
+                            coupon_code: str = None,
+                            limit: int = None,
+                            order: str = None,
+                            user_type: str = None,
+                            caller_opus_pc_id: str = None) -> dict:
+    """Query code history by opus_pc_id or coupon_code for QR scanning issues."""
+    return query_code_history_func(
+        opus_pc_id=opus_pc_id,
+        coupon_code=coupon_code,
+        limit=limit,
+        order=order,
+        user_type=user_type,
+        caller_opus_pc_id=caller_opus_pc_id
+        )

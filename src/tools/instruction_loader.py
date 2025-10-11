@@ -1,36 +1,29 @@
-"""
-Dynamic Instruction Loader for Birla Opus Customer Care (LiveKit Version)
-
-This tool loads the appropriate instruction flow based on the identified customer intent.
-"""
-
 import os
 from typing import Dict, Optional
+from livekit.agents import function_tool, RunContext
 
 
 class InstructionLoader:
     """Loads instruction flows dynamically based on customer intent"""
     
     def __init__(self):
-        # Get the path to the instructions directory
         current_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(os.path.dirname(current_dir))
         self.instructions_dir = os.path.join(project_root, 'data', 'Instructions')
         
         # Mapping between intents and instruction files (OPTIMIZED versions)
         self.intent_to_file = {
-            'KYC_APPROVAL': 'Enhanced_KYC_Approval_Contractor_OPTIMIZED.txt',
-            'POINT_REDEMPTION': 'Unable_to_redeem_points_OPTIMIZED.txt', 
-            'QR_SCANNING': 'QR_Scanning_OPTIMIZED.txt',
-            'ACCOUNT_BLOCKED': 'Account_Blocked_OPTIMIZED.txt',
-            'UNCLEAR': None  # Will use general inquiry approach
+            'KYC_APPROVAL': 'Enhanced_KYC_Approval_Contractor.txt',
+            'POINT_REDEMPTION': 'Unable_to_redeem_points.txt', 
+            'QR_SCANNING': 'QR_Scanning_Merged.txt',
+            'ACCOUNT_BLOCKED': 'Painter_Contractor_Account_Blocked.txt',
+            'UNCLEAR': None
         }
         
-        # Alternative file mappings for specific scenarios
         self.scenario_to_file = {
-            'KYC_PENDING': 'Enhanced_KYC_Approval_Contractor_OPTIMIZED.txt',
-            'INVALID_BARCODE': 'QR_Scanning_OPTIMIZED.txt',
-            'ENHANCED_KYC': 'Enhanced_KYC_Approval_Contractor_OPTIMIZED.txt'
+            'KYC_PENDING': 'Enhanced_KYC_Approval_Contractor.txt',
+            'INVALID_BARCODE': 'QR_Scanning_Merged.txt',
+            'ENHANCED_KYC': 'Enhanced_KYC_Approval_Contractor.txt'
         }
     
     def load_instruction_file(self, filename: str) -> Optional[str]:
@@ -240,4 +233,12 @@ def validate_instruction_files_func() -> Dict:
         'instructions_directory': _instruction_loader.instructions_dir
     }
 
+@function_tool()
+async def load_instructions_for_intent(context: RunContext, intent: str, scenario: str = None) -> dict:
+    """Load the appropriate instruction flow based on customer intent."""
+    return load_instructions_for_intent_func(intent, scenario)
 
+@function_tool()
+async def get_available_instruction_flows(context: RunContext) -> dict:
+    """Get list of all available instruction flows."""
+    return get_available_instruction_flows_func()

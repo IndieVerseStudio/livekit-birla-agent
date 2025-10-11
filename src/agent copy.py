@@ -35,6 +35,7 @@ logger = logging.getLogger("agent")
 
 load_dotenv(".env.local")
 
+
 class Assistant(Agent):
     def __init__(self) -> None:
         super().__init__(
@@ -71,23 +72,6 @@ async def entrypoint(ctx: JobContext):
     }
 
     # Set up a voice AI pipeline using OpenAI, Cartesia, Deepgram, and the LiveKit turn detector
-
-    # TTS Configuration - Switch between Gemini and Cartesia by commenting/uncommenting one line
-    # GEMINI TTS (currently active):
-    # tts_provider = google.beta.GeminiTTS(
-    #     model="gemini-2.5-flash-preview-tts",
-    #     voice_name="callirrhoe",
-    #     instructions="Speak in a friendly and engaging tone. Use a warm, professional voice suitable for customer service in Hindi.",
-    # )
-
-    # CARTESIA TTS (uncomment this line and comment the above to switch):
-    tts_provider = inference.TTS(
-        model="cartesia/sonic-2", 
-        voice="f8f5f1b2-f02d-4d8e-a40d-fd850a487b3d",
-        language="hi",
-        extra_kwargs={"speed": 0.4}
-    )
-
     session = AgentSession(
         llm = inference.LLM(
             model="google/gemini-2.5-flash",

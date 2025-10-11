@@ -10,6 +10,7 @@ import csv
 import os
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
+from livekit.agents import function_tool, RunContext
 
 
 def _get_cash_transfer_file_path() -> str:
@@ -430,3 +431,8 @@ def get_cash_transfer_history(opus_pc_id: str, limit: int = 3) -> Dict[str, Any]
 # Export the main function for LiveKit use
 # The agent.py will wrap this with @function_tool() decorator
 cash_transfer_history_func = get_cash_transfer_history
+
+@function_tool()
+async def cash_transfer_history_tool(context: RunContext, opus_pc_id: str, limit: int = 3) -> dict:
+    """Get cash transfer history and point balance for redemption checks."""
+    return cash_transfer_history_func(opus_pc_id=opus_pc_id, limit=limit)

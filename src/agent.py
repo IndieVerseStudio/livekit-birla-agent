@@ -90,6 +90,12 @@ class Assistant(Agent):
         **STEP 5A: SILENT MULTI-TOOL EXECUTION AND CONSOLIDATED REPLY**
         When the customer provides actionable data, run all necessary tools in the same turn silently. Do not send intermediate updates after each tool. Do not output any user-visible text before completing all planned tool calls for the turn. Send a single, concise message only when you have a clear outcome (issue identified, eligibility computed, or a complaint needs to be raised).
         
+        **CRITICAL**: After calling `classify_customer_intent` and `load_instructions_for_intent`:
+        - DO NOT send an acknowledgment message like "Haan sir main samajh pa rhi hun, Ap nishchint rahiye..."
+        - DO NOT generate any response text before the tools complete
+        - Proceed DIRECTLY with the next step in the loaded instruction flow
+        - The loaded instructions will tell you exactly what to say next
+        
         IDENTITY POLICY (APPLIES TO ALL FLOWS):
         - Default assumption: The caller is using their own phone. First ASK: "Kya aap apne registered mobile number se call kar rahe hain?"
         - If YES: Use `hardcoded_context_tool` → then `customer_lookup_tool` with returned phone
@@ -172,12 +178,21 @@ class Assistant(Agent):
         5. All other tools (customer lookup, KYC checker, complaint tools, etc.) as per loaded instructions
         
         **CONVERSATIONAL LANGUAGE GUIDE:**
-        - When you understand their issue: "Sure sir main samajh pa rhi hun"
+        - When you understand their issue: "Ji, main samajh gayi" or "Haan, theek hai" or "Haan sir main samajh pa rhi hun" and then say something like "Aap nishchint rahiye, main aapki puri sahayata karungi"
         - When issue is unclear (only if last classification returned UNCLEAR): "Pareshani kai liye hume khed hai, kaise sahayata kar sakti hun main aapki?"
-        - When helping: "Ap nishchint rahiye, main aapki puri sahayata karungi"
+        - DO NOT use generic reassurances like "Ap nishchint rahiye" - the loaded instructions will handle specific consolation
+        - After classifying intent and loading instructions, proceed DIRECTLY with the loaded flow
         - NEVER say: "intent is unclear", "system analysis", "classification result"
         - ALWAYS use natural conversation flow
         - Be professional yet warm like Anjali - a courteous 23-year-old customer care agent
+
+        LANGUAGE OUTPUT POLICY:
+        - Mirror the caller’s language automatically. If the user speaks Hindi, reply in Hindi using Devanagari (हिंदी script). If English, reply in English. If mixed, keep each word in its natural script (Hindi in Devanagari, English in Latin).
+        - Never use Latin transliteration for Hindi (avoid “Ap”, “aap”, “kyc karvani”). Prefer proper Devanagari: “आप”, “केवाईसी”, “करवानी”.
+        - Always write “आप” (not Ap/aap). This ensures correct TTS pronunciation.
+        - Phone numbers: write as spaced digits (e.g., “9 8 1 2 3 4 5 7 6 9”). Do not write them as a continuous number.
+        - Dates, amounts, and IDs: use human-friendly formatting for speech (e.g., “₹ 1,250” → “एक हज़ार दो सौ पचास रुपये” or “rupees one thousand two hundred fifty” based on language).
+        - Keep responses concise and conversational; avoid repeated generic reassurances.
         """,
         )
 
@@ -625,10 +640,26 @@ async def entrypoint(ctx: JobContext):
     }
 
     # Set up a voice AI pipeline using OpenAI, Cartesia, Deepgram, and the LiveKit turn detector
+
+    # TTS Configuration - Switch between Gemini and Cartesia by commenting/uncommenting one line
+    # GEMINI TTS (currently active):
+    # tts_provider = google.beta.GeminiTTS(
+    #     model="gemini-2.5-flash-preview-tts",
+    #     voice_name="callirrhoe",
+    #     instructions="Speak in a friendly and engaging tone. Use a warm, professional voice suitable for customer service in Hindi.",
+    # )
+
+    # CARTESIA TTS (uncomment this line and comment the above to switch):
+    tts_provider = cartesia.TTS(
+        voice="56e35e2d-6eb6-4226-ab8b-9776515a7094",
+        language="hi",
+    )
+
     session = AgentSession(
         llm=google.LLM(model="gemini-2.5-flash"),
-        stt=google.STT(model="telephony", spoken_punctuation=False, languages=["en-IN"], use_streaming=True),
-        tts=google.TTS(gender="female", voice_name="hi-IN-Chirp3-HD-Achernar", language="hi-IN", use_streaming=True),
+        # stt=google.STT(model="telephony", spoken_punctuation=False, languages=["en-IN"], use_streaming=True),
+        stt=deepgram.STT(model="nova-2", language="hi"),
+        tts=tts_provider,
         vad=silero.VAD.load(),
         allow_interruptions=True,
         discard_audio_if_uninterruptible=False,
@@ -638,6 +669,7 @@ async def entrypoint(ctx: JobContext):
         max_endpointing_delay=0.5,
         min_consecutive_speech_delay=0.0,
         resume_false_interruption=False,
+        preemptive_generation=True,
         user_away_timeout=15.0,
         false_interruption_timeout=2.0,
     )

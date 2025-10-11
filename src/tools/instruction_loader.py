@@ -1,9 +1,3 @@
-"""
-Dynamic Instruction Loader for Birla Opus Customer Care (LiveKit Version)
-
-This tool loads the appropriate instruction flow based on the identified customer intent.
-"""
-
 import os
 from typing import Dict, Optional
 from livekit.agents import function_tool, RunContext
@@ -13,7 +7,6 @@ class InstructionLoader:
     """Loads instruction flows dynamically based on customer intent"""
     
     def __init__(self):
-        # Get the path to the instructions directory
         current_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(os.path.dirname(current_dir))
         self.instructions_dir = os.path.join(project_root, 'data', 'Instructions')
@@ -24,10 +17,9 @@ class InstructionLoader:
             'POINT_REDEMPTION': 'Unable_to_redeem_points.txt', 
             'QR_SCANNING': 'QR_Scanning_Merged.txt',
             'ACCOUNT_BLOCKED': 'Painter_Contractor_Account_Blocked.txt',
-            'UNCLEAR': None  # Will use general inquiry approach
+            'UNCLEAR': None
         }
         
-        # Alternative file mappings for specific scenarios
         self.scenario_to_file = {
             'KYC_PENDING': 'KYC_Approval_Pending_Contractor.txt',
             'INVALID_BARCODE': 'QR_Scanning_Merged.txt',

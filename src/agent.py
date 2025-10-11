@@ -22,7 +22,7 @@ from tools.customer_lookup import customer_lookup_tool, customer_lookup_by_opus_
 from tools.phone_verification import verify_phone_number
 from tools.kyc_status_checker import kyc_status_checker_tool
 from tools.complaint_manager import auto_create_complaint_tool, create_complaint_tool, create_enquiry_tool, create_record_from_code_history, create_record_from_account_block, ensure_record_creation_tool
-from tools.intent_classifier import classify_customer_intent, get_intent_clarification_questions
+from tools.intent_classifier_tool import classify_customer_intent_tool
 from tools.instruction_loader import load_instructions_for_intent, get_available_instruction_flows
 from tools.code_history_tool import code_history_tool
 from tools.cash_transfer_tool import cash_transfer_history_tool
@@ -51,8 +51,7 @@ class Assistant(Agent):
                 create_record_from_code_history,
                 create_record_from_account_block,
                 ensure_record_creation_tool,
-                classify_customer_intent,
-                get_intent_clarification_questions,
+                classify_customer_intent_tool,
                 load_instructions_for_intent,
                 get_available_instruction_flows,
                 code_history_tool,

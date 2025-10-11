@@ -52,23 +52,20 @@ async def kyc_status_checker_tool(context: RunContext, opus_id: str) -> dict:
         
         # Calculate registration date (assuming data_created is days ago)
         registration_date = datetime.now() - timedelta(days=data_created_days)
+    
         
-        # Determine KYC completion status
-        kyc_documents_complete = is_aadhar_added and is_pan_added and is_bank_added
-        
-        # Analyze KYC status
-        if kyc_status == 'F':  # Full KYC Complete
-            days_since_kyc = data_created_days  # Assuming KYC completed at registration
+        if kyc_status == 'F':
+            days_since_kyc = data_created_days
             days_remaining = max(0, 30 - days_since_kyc)
             
             if days_since_kyc <= 30:
                 recommendation = "within_timeline"
-                message = f"KYC is done dont you need to wait {days_remaining} days"
+                message = f"KYC is done, you need to wait {days_remaining} days"
             else:
                 recommendation = "timeline_exceeded"
                 message = "KYC completion 30 days passed. Contact TSM or raise a complaint."
                 
-        elif kyc_status == 'P':  # Partial KYC
+        elif kyc_status == 'P':
             recommendation = "partial_kyc"
             missing_docs = []
             if not is_aadhar_added:
@@ -82,17 +79,17 @@ async def kyc_status_checker_tool(context: RunContext, opus_id: str) -> dict:
                 
             message = f"KYC is not complete. Please complete {', '.join(missing_docs)}"
             
-        elif kyc_status == 'R':  # Rejected
+        elif kyc_status == 'R':
             recommendation = "kyc_rejected"
             message = "KYC is rejected. Please submit documents again."
             
-        elif kyc_status == 'N':  # Not Started
+        elif kyc_status == 'N':
             recommendation = "kyc_not_started"
             message = "KYC is not started. Please complete KYC process."
             
         else:
             recommendation = "unknown_status"
-            message = "KYC status unclear. Please check with technical team."
+            message = "KYC status unclear. Please check with TSM"
         
         return {
             "success": True,

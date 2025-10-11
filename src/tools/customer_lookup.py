@@ -4,13 +4,13 @@ from typing import Dict, Any, List
 from livekit.agents import function_tool, RunContext
 
 def _get_data_file_path() -> str:
-    """Helper to get the absolute path to the mock data file."""
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(os.path.dirname(current_dir))  # Go up two levels from src/tools/
+    project_root = os.path.dirname(os.path.dirname(current_dir))
     return os.path.join(project_root, "data", "mock.csv")
+    
 
+# All the field are harcoded now cause in future we will rely on api call, so no need to refactor this for now
 def _find_customers(key: str, value: str) -> List[Dict[str, Any]]:
-    """Internal function to search for customers in the CSV."""
     data_file = _get_data_file_path()
     if not os.path.exists(data_file):
         raise FileNotFoundError(f"Customer data file not found at {data_file}")
@@ -20,7 +20,6 @@ def _find_customers(key: str, value: str) -> List[Dict[str, Any]]:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
             if key == 'mobile_number':
-                # For mobile numbers, clean both values and compare as strings
                 row_value = ''.join(filter(str.isdigit, row.get(key, '')))
                 if row_value == value:
                     accounts.append({
@@ -32,7 +31,6 @@ def _find_customers(key: str, value: str) -> List[Dict[str, Any]]:
                         "data_created": row.get('data_created', '')
                     })
             else:
-                # For other fields like opus_id, compare as strings (case insensitive)
                 row_value = row.get(key, '')
                 if row_value.lower() == value.lower():
                     accounts.append({

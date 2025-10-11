@@ -14,6 +14,7 @@ def _get_data_file_path() -> str:
     project_root = os.path.dirname(os.path.dirname(current_dir))  # Go up two levels from src/tools/
     return os.path.join(project_root, "data", "mock.csv")
 
+# All the field are harcoded now cause in future we will rely on api call, so no need to refactor this for now
 @function_tool()
 async def verify_phone_number(context: RunContext, phone_number: str) -> dict:
     """Verify if phone number is registered and get associated accounts."""

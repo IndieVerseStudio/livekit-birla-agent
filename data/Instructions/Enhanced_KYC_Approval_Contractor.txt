@@ -12,21 +12,26 @@ Follow the Enhanced KYC Approval Contractor process EXACTLY as outlined below.
 Customer's issue is related to KYC/contractor approval. Proceed directly:
 - ASK ONCE: 'Kya aap apne registered mobile number se call kar rahe hain?'
 - Wait for customer response
-- If customer says YES: Use `hardcoded_context_tool` and proceed directly to customer lookup
-- If customer says NO: Ask: 'Kya aap apna Opus ID bata sakte hain verification ke liye?'
-- If the caller DOES NOT know their Opus/UID: Ask for the 10-digit phone number and use `phone_verification_tool`
-- Only use phone verification tools if customer is NOT calling from registered number
+- If customer says YES:
+  * FIRST SPEAK: "मैं अभी आपके फ़ोन नंबर से आपकी जानकारी निकाल रही हूं, कृपया कुछ समय दीजिए।"
+  * Then use `hardcoded_context_tool` and `customer_lookup_tool` (both silent)
+- If customer says NO: 
+  * Ask: 'Kya aap apna Opus ID bata sakte hain verification ke liye?'
+  * FIRST SPEAK: "मैं अभी आपकी जानकारी देख रही हूं, एक मिनट।"
+  * Then use appropriate lookup tool (silent)
+- If the caller DOES NOT know their Opus/UID: Ask for the 10-digit phone number, then say "मैं अभी check कर रही हूं" and use `verify_phone_number` (silent)
 
 **STEP 3: ACCOUNT VERIFICATION & CUSTOMER CONFIRMATION**
-- If customer provided Opus ID: Use `customer_lookup_by_opus_id_tool` with the provided Opus ID
-- If using phone number from hardcoded context: Use `customer_lookup_tool` with the phone number
-- Use the retrieved name for internal confirmation logic; avoid sending multiple micro-updates. Confirm once, succinctly, in the final consolidated reply if needed.
-- Check for multiple accounts internally; if needed, ask only once for the specific Opus ID.
-- Confirm registration date and KYC completion date internally.
+- All lookups should happen SILENTLY after the "मैं देख रही हूं" notice
+- If customer provided Opus ID: Use `customer_lookup_by_opus_id_tool` (silent)
+- If using phone number from hardcoded context: Use `customer_lookup_tool` (silent)
+- Use the retrieved name for internal confirmation logic
+- Check for multiple accounts internally
+- Confirm registration date and KYC completion date internally
 
 **STEP 4: CHECK EXISTING COMPLAINTS FIRST**
-Before proceeding with KYC status:
-- Check for any existing complaints in the system using complaint tools
+Before proceeding with KYC status (all checks SILENT after initial notice):
+- Check for any existing complaints in the system using complaint tools (silent)
 - If previous complaint exists and is ACTIVE/within timeline: 
   * Provide existing complaint number
   * Reiterate timeline: 'Aapka complaint number hai [X], Please [X] days wait kijiye'
@@ -36,7 +41,8 @@ Before proceeding with KYC status:
   * Create HIGH PRIORITY complaint
 
 **STEP 5: KYC STATUS ANALYSIS (ONLY IF NO ACTIVE COMPLAINTS)**
-Use `kyc_status_checker_tool` to check current status:
+- All KYC checks happen SILENTLY (already informed user we're checking)
+- Use `kyc_status_checker_tool` to check current status (silent)
 - **Full KYC Complete (F)**: Calculate days since completion
   * Within 30 days: 'Aapko [X] days aur wait karna hoga, KYC completion date se 30 days lagते hain'
   * Beyond 30 days: Apologize for delay: 'Bahut maafi chahenge aapko jo asuvidha ho rahi hai uske liye'

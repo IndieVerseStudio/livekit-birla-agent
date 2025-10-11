@@ -9,10 +9,9 @@ description = "Simple voice AI assistant built with LiveKit Agents for Python"
 requires-python = ">=3.9"
 
 dependencies = [
-    "livekit-agents[cartesia,deepgram,google,openai,sarvam,silero,turn-detector]>=1.2",
-    "livekit-plugins-noise-cancellation>=0.2",
+    "livekit-agents[cartesia,deepgram,google,openai,sarvam,silero,turn-detector]~=1.2",
+    "livekit-plugins-noise-cancellation~=0.2",
     "python-dotenv",
-    "av<16.0.0",
 ]
 
 [dependency-groups]

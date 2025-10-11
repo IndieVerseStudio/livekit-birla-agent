@@ -1,0 +1,53 @@
+**QR SCANNING ISSUES (Already Scanned + Invalid Barcode)**
+(Refer to _COMMON_RULES.txt for identity, consent, closure policies)
+
+**CONTEXT:** Customer has QR/barcode scanning issue. Main flow already greeted and acknowledged.
+
+**STEP 1: IDENTITY + USER TYPE**
+(Follow _COMMON_RULES.txt identity flow)
+Ask: "Aap painter hain ya contractor?"
+- Painter: scan 13-digit (C) INSIDE bucket
+- Contractor: scan 12-digit (L) OUTSIDE bucket
+
+**STEP 2: COLLECT QR CODE**
+Ask: "Aap jo QR/Barcode scan kar rahe the, uska number kya hai?"
+
+**STEP 3: CHECK CODE DETAILS (mandatory)**
+Pre-lookup notice → `code_history_tool(coupon_code, user_type, caller_opus_pc_id)` (silent)
+Use `message` internally. Use `advice[]` and `summary.latest.status` for next steps.
+
+**STEP 4: ANALYZE STATUS & ADVICE**
+**WRONG_CODE_TYPE (in advice):**
+- Contractor scanning Painter code: "Aap painter ka QR scan kar rahe hain jo bucket ke andar hota hai. Contractors ko bahar wala scan karna chahiye."
+  * Enquiry: Subject: Contractor scanning Painter code
+- Painter scanning Contractor code: Similar explanation
+  * Enquiry: Subject: Painter scanning Contractor code
+
+**DUPLICATE_SCAN_BY_SAME_USER:**
+"Ek QR code sirf ek baar scan ho sakta hai."
+- Enquiry: Subject: Already scanned by same customer
+
+**CREATE_COMPLAINT_FOR_FRAUD_SCAN:**
+"Ye QR code kisi aur ne scan kiya hai. Kya main complaint raise kar dun?"
+- If YES: Complaint: Type: Opus ID App | Issue: Unable to Scan | Subject: Scanned by someone else | Timeline: 7 days
+
+**Status-specific (from summary.latest.status):**
+- P (Pending): "2-3 days wait. Optionally check KYC via `kyc_status_checker_tool`"
+- G (Geo): "22 metres away from contractor location se scan kijiye"
+- R/Z (Rejected): Check KYC; if complete → complaint + suggest TSM
+- E (Expired): "Code expired, no credit possible"
+
+**Code not in system:**
+"Code details system mein update nahi hui. Manual entry try kijiye."
+- If manual works: Enquiry: Subject: Invalid QR but manual entry worked
+- If manual fails: Complaint (7 days)
+
+**Error types (Invalid QR, Inactive Token, etc.):**
+First suggest manual entry → If fails → Complaint (7 days)
+
+**STEP 5: RECORD CREATION**
+Prefer `create_record_from_code_history` with latest status + advice.
+Only announce complaints (7-day timeline).
+
+(Refer to _COMMON_RULES.txt for additional support and closure)
+

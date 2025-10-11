@@ -1,0 +1,39 @@
+**ACCOUNT BLOCKED ISSUES**
+(Refer to _COMMON_RULES.txt for identity, consent, closure policies)
+
+**CONTEXT:** Customer's account is blocked. Main flow already greeted and acknowledged.
+
+**STEP 1: IDENTITY VERIFICATION**
+(Follow _COMMON_RULES.txt identity flow)
+
+**STEP 2: ACCOUNT STATUS CHECK (mandatory)**
+Pre-lookup notice → `account_block_status_tool(opus_id)` (silent)
+Returns block status: U (Unblocked), A (Automatic), M (Manual), P (Permanent)
+Plus: `block_status_date`, `block_through` (O=OTP, S=Scans), `timeline_info`, `advice[]`
+
+**STEP 3: STATUS-SPECIFIC ACTIONS**
+
+**AUTOMATIC (A):**
+Explain: "Account [reason] se automatically block hai."
+- O (OTP): "Lagataar OTP requests detection se temporary block. 48 hours wait, automatically unblock hoga. Aage chalke anavashyak OTP avoid kijiye."
+- S (Scans): "Multiple galat/suspicious scans detect hue. Sahi code scan (Contractor: 12-L outside; Painter: 13-C inside), ek code ek baar, proper lighting. 48 hours ke baad login try."
+Inform: "Aap [expected_auto_unblock_date] tak wait kijiye; uske baad login try."
+Ticketing:
+- <48 hrs: Enquiry (timeline guidance)
+- ≥48 hrs: Complaint (investigation, 7 days)
+
+**MANUAL (M):**
+"Account backend team dwara [block_date] ko manually block kiya gaya. Ye automatic unblock nahi hota. TSM/territory team decision ke baad unblock hoga."
+Guide: "Nazdiki dealer se TSM number lijiye, situation explain kijiye."
+- Complaint (investigation, TSM decision, 7 days)
+
+**PERMANENT (P) OR OTHER:**
+"Maafi chahenge, account mein technical issue hai."
+- Complaint: Type: Opus ID App | Issue: UID Blocked | Subject: Account Blocked - [TYPE] | Timeline: 7 days
+
+**STEP 4: CONSOLIDATED RESPONSE**
+Single message with diagnosis + ticket (if created) + timeline.
+Only announce complaints (7-day timeline).
+
+(Refer to _COMMON_RULES.txt for additional support and closure)
+

@@ -17,20 +17,20 @@ class InstructionLoader:
         project_root = os.path.dirname(os.path.dirname(current_dir))
         self.instructions_dir = os.path.join(project_root, 'data', 'Instructions')
         
-        # Mapping between intents and instruction files
+        # Mapping between intents and instruction files (OPTIMIZED versions)
         self.intent_to_file = {
-            'KYC_APPROVAL': 'Enhanced_KYC_Approval_Contractor.txt',
-            'POINT_REDEMPTION': 'Unable_to_redeem_points.txt', 
-            'QR_SCANNING': 'QR_Scanning_Merged.txt',
-            'ACCOUNT_BLOCKED': 'Painter_Contractor_Account_Blocked.txt',
+            'KYC_APPROVAL': 'Enhanced_KYC_Approval_Contractor_OPTIMIZED.txt',
+            'POINT_REDEMPTION': 'Unable_to_redeem_points_OPTIMIZED.txt', 
+            'QR_SCANNING': 'QR_Scanning_OPTIMIZED.txt',
+            'ACCOUNT_BLOCKED': 'Account_Blocked_OPTIMIZED.txt',
             'UNCLEAR': None  # Will use general inquiry approach
         }
         
         # Alternative file mappings for specific scenarios
         self.scenario_to_file = {
-            'KYC_PENDING': 'KYC_Approval_Pending_Contractor.txt',
-            'INVALID_BARCODE': 'QR_Scanning_Merged.txt',
-            'ENHANCED_KYC': 'Enhanced_KYC_Approval_Contractor.txt'
+            'KYC_PENDING': 'Enhanced_KYC_Approval_Contractor_OPTIMIZED.txt',
+            'INVALID_BARCODE': 'QR_Scanning_OPTIMIZED.txt',
+            'ENHANCED_KYC': 'Enhanced_KYC_Approval_Contractor_OPTIMIZED.txt'
         }
     
     def load_instruction_file(self, filename: str) -> Optional[str]:

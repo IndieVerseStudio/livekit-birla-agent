@@ -1,54 +1,14 @@
-"""
-Cash Transfer History Tool (LiveKit Version)
-
-Provides the last N cash transfer requests for a given opus_pc_id from
-data/cash_transfer.csv and enriches with reference info from
-data/cash_transfer_reference.csv.
-"""
-
 import csv
 import os
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
 from livekit.agents import function_tool, RunContext
-
-
-def _get_cash_transfer_file_path() -> str:
-    """Get absolute path to cash_transfer.csv."""
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(os.path.dirname(current_dir))
-    return os.path.join(project_root, "data/cash_transfer.csv")
-
-
-def _get_cash_transfer_reference_file_path() -> str:
-    """Get absolute path to cash_transfer_reference.csv."""
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(os.path.dirname(current_dir))
-    return os.path.join(project_root, "data/cash_transfer_reference.csv")
-
-
-def _normalize_opus_pc_id(raw: Optional[str]) -> Optional[str]:
-    """Normalize Opus ID to canonical PC-XXXXXX format (6 digits, zero-padded)."""
-    if raw is None:
-        return None
-    s = str(raw).strip()
-    if not s:
-        return None
-    if s.upper().startswith("PC-"):
-        return s
-    digits = ''.join(ch for ch in s if ch.isdigit())
-    if not digits:
-        return s
-    if len(digits) < 6:
-        digits = digits.zfill(6)
-    return f"PC-{digits}"
-
+from utils.helper import get_file_path
 
 TYPE_LABELS: Dict[str, str] = {
     "U": "UPI transaction",
     "B": "Bank Transfer",
 }
-
 
 STATUS_LABELS: Dict[str, str] = {
     "P": "Pending",
@@ -56,7 +16,6 @@ STATUS_LABELS: Dict[str, str] = {
     "N": "Failed",
     "R": "Rejected",
 }
-
 
 def _parse_dt(value: str) -> Optional[datetime]:
     """Parse CSV datetime like '11/08/25 10:50'. Return None if unknown."""
@@ -76,23 +35,6 @@ def _parse_dt(value: str) -> Optional[datetime]:
             continue
     return None
 
-
-def _get_point_history_file_path() -> str:
-    """Get absolute path to point_history.csv."""
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(os.path.dirname(current_dir))
-    return os.path.join(project_root, "data/point_history.csv")
-
-
-def _safe_int(value: Optional[str]) -> int:
-    try:
-        if value is None or value == "":
-            return 0
-        return int(float(value))
-    except Exception:
-        return 0
-
-
 def _compute_point_balance(opus_pc_id: str) -> Dict[str, Any]:
     """Compute or fetch the latest balance for an opus_pc_id from point_history.csv.
 
@@ -106,7 +48,7 @@ def _compute_point_balance(opus_pc_id: str) -> Dict[str, Any]:
         "as_of": None,
     }
 
-    path = _get_point_history_file_path()
+    path = get_file_path("data/point_history.csv")
     if not os.path.exists(path):
         return result
 
@@ -121,7 +63,6 @@ def _compute_point_balance(opus_pc_id: str) -> Dict[str, Any]:
         return result
 
     if not rows:
-        # No history available
         return result
 
     # Sort by created_at desc
@@ -131,30 +72,16 @@ def _compute_point_balance(opus_pc_id: str) -> Dict[str, Any]:
     for r in rows:
         bal_raw = (r.get("balance") or "").strip()
         if bal_raw != "":
-            result["balance"] = _safe_int(bal_raw)
+            result["balance"] = bal_raw
             result["source"] = "balance_field"
             result["as_of"] = r.get("created_at")
             break
-
-    if result["balance"] is None:
-        # Fallback: compute from credits (C) and debits (D)
-        computed = 0
-        for r in rows:
-            points = _safe_int(r.get("point_cr_db"))
-            method = (r.get("method") or "").strip().upper()
-            if method == "C":
-                computed += points
-            elif method == "D":
-                computed -= points
-        result["balance"] = computed
-        result["source"] = "computed"
-        result["as_of"] = rows[0].get("created_at")
 
     return result
 
 
 def _sort_key(row: Dict[str, str]) -> Tuple[Optional[datetime], Optional[datetime], int]:
-    """Sort primarily by updated_at, then created_at, then id (desc)."""
+    """Sort primarily by created_at, then updated_at, then id (desc)."""
     def to_int(v: Optional[str]) -> int:
         try:
             if v is None or v == "":
@@ -164,15 +91,15 @@ def _sort_key(row: Dict[str, str]) -> Tuple[Optional[datetime], Optional[datetim
             return 0
 
     return (
-        _parse_dt(row.get("updated_at", "")) or _parse_dt(row.get("created_at", "")),
-        _parse_dt(row.get("created_at", "")),
+        _parse_dt(row.get("created_at", "")) or _parse_dt(row.get("updated_at", "")),
+        _parse_dt(row.get("updated_at", "")),
         to_int(row.get("id")),
     )
 
 
 def _load_reference_map() -> Dict[str, List[Dict[str, str]]]:
     """Load reference rows keyed by cash_transfer_id (string)."""
-    ref_path = _get_cash_transfer_reference_file_path()
+    ref_path = get_file_path("data/cash_transfer_reference.csv")
     ref_map: Dict[str, List[Dict[str, str]]] = {}
     if not os.path.exists(ref_path):
         return ref_map
@@ -240,42 +167,37 @@ def get_cash_transfer_history(opus_pc_id: str, limit: int = 3) -> Dict[str, Any]
         success flag, normalized opus id, compact entries list, and a small summary.
     """
     try:
-        data_path = _get_cash_transfer_file_path()
+        if not opus_pc_id:
+            return {"success": False, "error": "opus_pc_id is required"}
+
+        data_path = get_file_path("data/cash_transfer.csv")
         if not os.path.exists(data_path):
             return {"success": False, "error": f"Cash transfer file not found at {data_path}"}
-
-        target_norm = _normalize_opus_pc_id(opus_pc_id)
-        if not target_norm:
-            return {"success": False, "error": "opus_pc_id is required"}
 
         rows: List[Dict[str, str]] = []
         with open(data_path, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                if (row.get("opus_pc_id") or "").strip() == target_norm:
+                if (row.get("opus_pc_id") or "").strip() == opus_pc_id:
                     rows.append(row)
-
-        # rows may be empty; still return balance and eligibility
 
         # Sort rows (desc)
         rows.sort(key=_sort_key, reverse=True)
 
-        # Limit
+        # Limit i.e: recent 3 entries
         lim = max(1, int(limit)) if limit else 3
         limited_rows = rows[:lim]
 
         # Load reference map and build entries
-        # Join primarily on transfer_id (cash_transfer.csv) -> cash_transfer_id (reference)
-        # Fallback to id (cash_transfer.csv) -> cash_transfer_id (reference) for legacy datasets
         ref_map = _load_reference_map()
         entries: List[Dict[str, Any]] = []
         for r in limited_rows:
-            key_by_transfer = (r.get("transfer_id") or "").strip()
             key_by_id = (r.get("id") or "").strip()
-            ref_rows = ref_map.get(key_by_transfer) or ref_map.get(key_by_id, [])
+            ref_rows = ref_map.get(key_by_id, [])
             entries.append(_row_to_entry(r, ref_rows))
 
         # Compute summary
+        #??? what are we doing here
         counts_by_status: Dict[str, int] = {}
         for r in limited_rows:
             sc = (r.get("status") or "").strip().upper()
@@ -300,7 +222,6 @@ def get_cash_transfer_history(opus_pc_id: str, limit: int = 3) -> Dict[str, Any]
             "latest": latest_block,
         }
 
-        # Compose a short message for quick speaking by the agent
         if summary["latest"] is not None:
             latest = summary["latest"]
             message = (
@@ -310,7 +231,7 @@ def get_cash_transfer_history(opus_pc_id: str, limit: int = 3) -> Dict[str, Any]
             message = "No prior cash transfers found for this Opus ID."
 
         # Attach point balance
-        point_balance_info = _compute_point_balance(target_norm)
+        point_balance_info = _compute_point_balance(opus_pc_id)
 
         # Determine first-time vs repeat redemption using ANY successful transfer (status=Y)
         any_success_rows = [r for r in rows if (r.get("status") or "").strip().upper() == "Y"]
@@ -401,7 +322,7 @@ def get_cash_transfer_history(opus_pc_id: str, limit: int = 3) -> Dict[str, Any]
 
         return {
             "success": True,
-            "opus_pc_id": target_norm,
+            "opus_pc_id": opus_pc_id,
             "entries": entries,
             "summary": summary,
             "message": message,

@@ -1,37 +1,9 @@
-"""
-Account Block Status tool for Birla Opus Customer Care (LiveKit Version).
-
-Looks up a customer (by Opus ID or mobile) in mock_extended.csv and evaluates
-their block status, computing clear next-step recommendations for the agent.
-"""
-
 import csv
 import os
 from datetime import datetime, timedelta
 from typing import Any, Dict, Optional
 from livekit.agents import function_tool, RunContext
-
-
-def _get_data_file_path() -> str:
-    """Get the absolute path to the extended mock data file."""
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(os.path.dirname(current_dir))
-    return os.path.join(project_root, "data/mock_extended.csv")
-
-
-def _clean_phone(value: Optional[str]) -> Optional[str]:
-    if value is None:
-        return None
-    digits = ''.join(ch for ch in str(value) if ch.isdigit())
-    return digits if digits else None
-
-
-def _clean_opus(value: Optional[str]) -> Optional[str]:
-    if value is None:
-        return None
-    digits = ''.join(ch for ch in str(value) if ch.isdigit())
-    return digits if digits else None
-
+from utils.helper import clean_phone_number, get_file_path
 
 def _parse_block_date(value: Optional[str]) -> Optional[datetime]:
     if not value:
@@ -95,17 +67,10 @@ def check_account_block_status(
                 "error": "Provide opus_id or mobile_number",
             }
 
-        def _normalize_opus_digits(raw: Optional[str]) -> Optional[str]:
-            d = _clean_opus(raw)
-            if not d:
-                return None
-            # Zero-pad to 6 digits to align with PC-XXXXXX semantics
-            return d.zfill(6)
+        query_opus = opus_id
+        query_phone = clean_phone_number(mobile_number) if mobile_number else None
 
-        query_opus = _normalize_opus_digits(opus_id) if opus_id else None
-        query_phone = _clean_phone(mobile_number) if mobile_number else None
-
-        data_file = _get_data_file_path()
+        data_file = get_file_path("data/mock_extended.csv")
         if not os.path.exists(data_file):
             return {
                 "success": False,
@@ -114,23 +79,21 @@ def check_account_block_status(
 
         matched_row: Optional[Dict[str, str]] = None
 
-        # Prefer opus match when provided, then fall back to phone
         with open(data_file, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             rows = list(reader)
 
         if query_opus:
             for row in rows:
-                # Match either numeric opus_id (unpadded) or PC-formatted opus_pc_id
-                row_opus_digits = _normalize_opus_digits(row.get('opus_id'))
-                row_pc_digits = _normalize_opus_digits(row.get('opus_pc_id'))
+                row_opus_digits = row.get('opus_id')
+                row_pc_digits = row.get('opus_pc_id')
                 if row_opus_digits == query_opus or row_pc_digits == query_opus:
                     matched_row = row
                     break
 
         if matched_row is None and query_phone:
             for row in rows:
-                row_phone = _clean_phone(row.get('mobile_number'))
+                row_phone = row.get('mobile_number')
                 if row_phone == query_phone:
                     matched_row = row
                     break
@@ -143,6 +106,7 @@ def check_account_block_status(
                 "query": {"opus_id": opus_id, "mobile_number": mobile_number},
             }
 
+        # We need to make api calls for these so we can refactor it later
         # Extract key fields
         customer_name = f"{matched_row.get('first_name', '').strip()} {matched_row.get('last_name', '').strip()}".strip()
         found_opus = matched_row.get('opus_id', '')
@@ -166,8 +130,6 @@ def check_account_block_status(
             expected_auto_unblock_date = expected_dt.strftime("%Y-%m-%d")
 
         advice = []
-        message = ""
-        recommendation = None  # wait | complaint | none
         timeline_info: Dict[str, Any] = {}
 
         status_label = _status_label(block_status)

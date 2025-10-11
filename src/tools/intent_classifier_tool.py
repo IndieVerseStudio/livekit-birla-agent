@@ -5,7 +5,7 @@ from utils.intent_classifier import IntentClassifier
 _classifier = IntentClassifier()
 
 @function_tool()
-def classify_customer_intent_tool(context: RunContext, customer_query: str) -> Dict:
+async def classify_customer_intent_tool(context: RunContext, customer_query: str) -> Dict:
     """
     Classify customer intent based on their initial query/complaint.
     
